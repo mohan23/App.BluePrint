@@ -1,0 +1,5 @@
+﻿<div ng-show="alert.type != undefined" class="alert alert-dismissable alert-{{alert.type}}">
+    <button class="close" type="button" data-dismiss="alert">×</button>
+    <h4 ng-hide="alert.title == undefined">{{alert.title}}</h4>
+    <p ng-hide="alert.message == undefined">{{alert.message}}</p>
+</div>

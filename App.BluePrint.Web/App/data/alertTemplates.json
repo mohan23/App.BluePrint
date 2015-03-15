@@ -1,0 +1,4 @@
+﻿{
+    "alertDismiss": "<div class='alert alert-dismissable alert-{{content.type}}'><button class='close' type='button' data-dismiss='alert'>×</button><h4>{{content.title}}</h4><p>{{content.message}}</a>.</p></div>",
+    "alert": "<div class='alert alert-{{content.type}}'><h4>{{content.title}}</h4><p>{{content.message}}</a>.</p></div>"
+}

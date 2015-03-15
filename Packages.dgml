@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Tests\App.BluePrint.Test.Authorization" Label="App.BluePrint.Test.Authorization" Category="Project" />
+    <Node Id="Abp 0.5.0.0" Label="Abp 0.5.0.0" Category="Package" />
+    <Node Id="Abp.EntityFramework 0.5.0.0" Label="Abp.EntityFramework 0.5.0.0" Category="Package" />
+    <Node Id="Castle.Core 3.3.0" Label="Castle.Core 3.3.0" Category="Package" />
+    <Node Id="Castle.LoggingFacility 3.3.0" Label="Castle.LoggingFacility 3.3.0" Category="Package" />
+    <Node Id="Castle.Windsor 3.3.0" Label="Castle.Windsor 3.3.0" Category="Package" />
+    <Node Id="Effort.EF6 1.1.4" Label="Effort.EF6 1.1.4" Category="Package" />
+    <Node Id="EntityFramework 6.1.2" Label="EntityFramework 6.1.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.Identity.Core 2.1.0" Label="Microsoft.AspNet.Identity.Core 2.1.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.Identity.EntityFramework 2.1.0" Label="Microsoft.AspNet.Identity.EntityFramework 2.1.0" Category="Package" />
+    <Node Id="Microsoft.Bcl.Immutable 1.0.34" Label="Microsoft.Bcl.Immutable 1.0.34" Category="Package" />
+    <Node Id="NMemory 1.0.1" Label="NMemory 1.0.1" Category="Package" />
+    <Node Id="NSubstitute 1.8.1.0" Label="NSubstitute 1.8.1.0" Category="Package" />
+    <Node Id="Shouldly 2.3.1" Label="Shouldly 2.3.1" Category="Package" />
+    <Node Id="xunit 1.9.2" Label="xunit 1.9.2" Category="Package" />
+    <Node Id="Framework\App.BluePrint.UserFramework" Label="App.BluePrint.UserFramework" Category="Project" />
+    <Node Id="Abp 0.5.0.0" Label="Abp 0.5.0.0" Category="Package" />
+    <Node Id="Abp.EntityFramework 0.5.0.0" Label="Abp.EntityFramework 0.5.0.0" Category="Package" />
+    <Node Id="Castle.Core 3.3.0" Label="Castle.Core 3.3.0" Category="Package" />
+    <Node Id="Castle.LoggingFacility 3.3.0" Label="Castle.LoggingFacility 3.3.0" Category="Package" />
+    <Node Id="Castle.Windsor 3.3.0" Label="Castle.Windsor 3.3.0" Category="Package" />
+    <Node Id="EntityFramework 6.1.2" Label="EntityFramework 6.1.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.Identity.Core 2.1.0" Label="Microsoft.AspNet.Identity.Core 2.1.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.Identity.EntityFramework 2.1.0" Label="Microsoft.AspNet.Identity.EntityFramework 2.1.0" Category="Package" />
+    <Node Id="Microsoft.Bcl.Immutable 1.0.34" Label="Microsoft.Bcl.Immutable 1.0.34" Category="Package" />
+    <Node Id="Framework\App.BluePrint.EntityFramework" Label="App.BluePrint.EntityFramework" Category="Project" />
+    <Node Id="Abp 0.5.0.0" Label="Abp 0.5.0.0" Category="Package" />
+    <Node Id="Abp.EntityFramework 0.5.0.0" Label="Abp.EntityFramework 0.5.0.0" Category="Package" />
+    <Node Id="Castle.Core 3.3.3" Label="Castle.Core 3.3.3" Category="Package" />
+    <Node Id="Castle.LoggingFacility 3.3.0" Label="Castle.LoggingFacility 3.3.0" Category="Package" />
+    <Node Id="Castle.Windsor 3.3.0" Label="Castle.Windsor 3.3.0" Category="Package" />
+    <Node Id="EntityFramework 6.1.2" Label="EntityFramework 6.1.2" Category="Package" />
+    <Node Id="Microsoft.Bcl.Immutable 1.0.34" Label="Microsoft.Bcl.Immutable 1.0.34" Category="Package" />
+    <Node Id="Web\App.BluePrint.WebApi" Label="App.BluePrint.WebApi" Category="Project" />
+    <Node Id="Abp 0.5.0.0" Label="Abp 0.5.0.0" Category="Package" />
+    <Node Id="Abp.AutoMapper 0.5.0.0" Label="Abp.AutoMapper 0.5.0.0" Category="Package" />
+    <Node Id="Abp.Web 0.5.0.0" Label="Abp.Web 0.5.0.0" Category="Package" />
+    <Node Id="Abp.Web.Api 0.5.0.0" Label="Abp.Web.Api 0.5.0.0" Category="Package" />
+    <Node Id="AutoMapper 3.3.0" Label="AutoMapper 3.3.0" Category="Package" />
+    <Node Id="Castle.Core 3.3.3" Label="Castle.Core 3.3.3" Category="Package" />
+    <Node Id="Castle.LoggingFacility 3.3.0" Label="Castle.LoggingFacility 3.3.0" Category="Package" />
+    <Node Id="Castle.Windsor 3.3.0" Label="Castle.Windsor 3.3.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi 5.2.2" Label="Microsoft.AspNet.WebApi 5.2.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Client 5.2.2" Label="Microsoft.AspNet.WebApi.Client 5.2.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Core 5.2.2" Label="Microsoft.AspNet.WebApi.Core 5.2.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.WebHost 5.2.2" Label="Microsoft.AspNet.WebApi.WebHost 5.2.2" Category="Package" />
+    <Node Id="Microsoft.Bcl.Immutable 1.0.34" Label="Microsoft.Bcl.Immutable 1.0.34" Category="Package" />
+    <Node Id="Newtonsoft.Json 6.0.7" Label="Newtonsoft.Json 6.0.7" Category="Package" />
+    <Node Id="Web\App.BluePrint.Web" Label="App.BluePrint.Web" Category="Project" />
+    <Node Id="Abp 0.5.0.0" Label="Abp 0.5.0.0" Category="Package" />
+    <Node Id="Abp.AutoMapper 0.5.0.0" Label="Abp.AutoMapper 0.5.0.0" Category="Package" />
+    <Node Id="Abp.Web 0.5.0.0" Label="Abp.Web 0.5.0.0" Category="Package" />
+    <Node Id="Abp.Web.Api 0.5.0.0" Label="Abp.Web.Api 0.5.0.0" Category="Package" />
+    <Node Id="Abp.Web.Mvc 0.5.0.0" Label="Abp.Web.Mvc 0.5.0.0" Category="Package" />
+    <Node Id="Abp.Web.Resources 0.5.0.0" Label="Abp.Web.Resources 0.5.0.0" Category="Package" />
+    <Node Id="Angular.UI.Bootstrap 0.12.0" Label="Angular.UI.Bootstrap 0.12.0" Category="Package" />
+    <Node Id="Angular.UI.UI-Router 0.2.13" Label="Angular.UI.UI-Router 0.2.13" Category="Package" />
+    <Node Id="Angular.UI.Utils 0.1.1" Label="Angular.UI.Utils 0.1.1" Category="Package" />
+    <Node Id="angularjs 1.3.8" Label="angularjs 1.3.8" Category="Package" />
+    <Node Id="Antlr 3.5.0.2" Label="Antlr 3.5.0.2" Category="Package" />
+    <Node Id="AutoMapper 3.3.0" Label="AutoMapper 3.3.0" Category="Package" />
+    <Node Id="bootstrap 3.3.1" Label="bootstrap 3.3.1" Category="Package" />
+    <Node Id="Castle.Core 3.3.3" Label="Castle.Core 3.3.3" Category="Package" />
+    <Node Id="Castle.Core-log4net 3.3.3" Label="Castle.Core-log4net 3.3.3" Category="Package" />
+    <Node Id="Castle.LoggingFacility 3.3.0" Label="Castle.LoggingFacility 3.3.0" Category="Package" />
+    <Node Id="Castle.Windsor 3.3.0" Label="Castle.Windsor 3.3.0" Category="Package" />
+    <Node Id="Castle.Windsor-log4net 3.3.0" Label="Castle.Windsor-log4net 3.3.0" Category="Package" />
+    <Node Id="EntityFramework 6.1.2" Label="EntityFramework 6.1.2" Category="Package" />
+    <Node Id="FontAwesome 4.2.0" Label="FontAwesome 4.2.0" Category="Package" />
+    <Node Id="jQuery 2.1.1" Label="jQuery 2.1.1" Category="Package" />
+    <Node Id="jQuery.BlockUI 2.70" Label="jQuery.BlockUI 2.70" Category="Package" />
+    <Node Id="jQuery.UI.Combined 1.11.2" Label="jQuery.UI.Combined 1.11.2" Category="Package" />
+    <Node Id="jQuery.Validation 1.13.1" Label="jQuery.Validation 1.13.1" Category="Package" />
+    <Node Id="json2 1.0.2" Label="json2 1.0.2" Category="Package" />
+    <Node Id="log4net 1.2.10" Label="log4net 1.2.10" Category="Package" />
+    <Node Id="Microsoft.AspNet.Mvc 5.2.2" Label="Microsoft.AspNet.Mvc 5.2.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.Razor 3.2.2" Label="Microsoft.AspNet.Razor 3.2.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.Web.Optimization 1.1.3" Label="Microsoft.AspNet.Web.Optimization 1.1.3" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi 5.2.2" Label="Microsoft.AspNet.WebApi 5.2.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Client 5.2.2" Label="Microsoft.AspNet.WebApi.Client 5.2.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Core 5.2.2" Label="Microsoft.AspNet.WebApi.Core 5.2.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.WebHost 5.2.2" Label="Microsoft.AspNet.WebApi.WebHost 5.2.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebPages 3.2.2" Label="Microsoft.AspNet.WebPages 3.2.2" Category="Package" />
+    <Node Id="Microsoft.Bcl.Immutable 1.0.34" Label="Microsoft.Bcl.Immutable 1.0.34" Category="Package" />
+    <Node Id="Microsoft.Web.Infrastructure 1.0.0.0" Label="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package" />
+    <Node Id="Modernizr 2.8.3" Label="Modernizr 2.8.3" Category="Package" />
+    <Node Id="Moment.js 2.8.4" Label="Moment.js 2.8.4" Category="Package" />
+    <Node Id="Newtonsoft.Json 6.0.7" Label="Newtonsoft.Json 6.0.7" Category="Package" />
+    <Node Id="toastr 2.1.0" Label="toastr 2.1.0" Category="Package" />
+    <Node Id="WebGrease 1.6.0" Label="WebGrease 1.6.0" Category="Package" />
+    <Node Id="BusinessLayer\App.BluePrint.Core" Label="App.BluePrint.Core" Category="Project" />
+    <Node Id="Abp 0.5.0.0" Label="Abp 0.5.0.0" Category="Package" />
+    <Node Id="Castle.Core 3.3.3" Label="Castle.Core 3.3.3" Category="Package" />
+    <Node Id="Castle.LoggingFacility 3.3.0" Label="Castle.LoggingFacility 3.3.0" Category="Package" />
+    <Node Id="Castle.Windsor 3.3.0" Label="Castle.Windsor 3.3.0" Category="Package" />
+    <Node Id="Microsoft.Bcl.Immutable 1.0.34" Label="Microsoft.Bcl.Immutable 1.0.34" Category="Package" />
+    <Node Id="BusinessLayer\App.BluePrint.Application" Label="App.BluePrint.Application" Category="Project" />
+    <Node Id="Abp 0.5.0.0" Label="Abp 0.5.0.0" Category="Package" />
+    <Node Id="Abp.AutoMapper 0.5.0.0" Label="Abp.AutoMapper 0.5.0.0" Category="Package" />
+    <Node Id="AutoMapper 3.3.0" Label="AutoMapper 3.3.0" Category="Package" />
+    <Node Id="Castle.Core 3.3.3" Label="Castle.Core 3.3.3" Category="Package" />
+    <Node Id="Castle.LoggingFacility 3.3.0" Label="Castle.LoggingFacility 3.3.0" Category="Package" />
+    <Node Id="Castle.Windsor 3.3.0" Label="Castle.Windsor 3.3.0" Category="Package" />
+    <Node Id="Microsoft.Bcl.Immutable 1.0.34" Label="Microsoft.Bcl.Immutable 1.0.34" Category="Package" />
+  </Nodes>
+  <Links>
+    <Link Source="Abp 0.5.0.0" Target="Castle.LoggingFacility 3.3.0" Category="Package Dependency" />
+    <Link Source="Abp 0.5.0.0" Target="Microsoft.Bcl.Immutable 1.0.34" Category="Package Dependency" />
+    <Link Source="Abp.EntityFramework 0.5.0.0" Target="Castle.Windsor 3.3.0" Category="Package Dependency" />
+    <Link Source="Abp.EntityFramework 0.5.0.0" Target="EntityFramework 6.1.2" Category="Package Dependency" />
+    <Link Source="Abp.EntityFramework 0.5.0.0" Target="Abp 0.5.0.0" Category="Package Dependency" />
+    <Link Source="Castle.LoggingFacility 3.3.0" Target="Castle.Core 3.3.0" Category="Package Dependency" />
+    <Link Source="Castle.LoggingFacility 3.3.0" Target="Castle.Windsor 3.3.0" Category="Package Dependency" />
+    <Link Source="Castle.Windsor 3.3.0" Target="Castle.Core 3.3.0" Category="Package Dependency" />
+    <Link Source="Effort.EF6 1.1.4" Target="NMemory 1.0.1" Category="Package Dependency" />
+    <Link Source="Effort.EF6 1.1.4" Target="EntityFramework 6.1.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Identity.EntityFramework 2.1.0" Target="Microsoft.AspNet.Identity.Core 2.1.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Identity.EntityFramework 2.1.0" Target="EntityFramework 6.1.2" Category="Package Dependency" />
+    <Link Source="Tests\App.BluePrint.Test.Authorization" Target="Abp.EntityFramework 0.5.0.0" Category="Installed Package" />
+    <Link Source="Tests\App.BluePrint.Test.Authorization" Target="Effort.EF6 1.1.4" Category="Installed Package" />
+    <Link Source="Tests\App.BluePrint.Test.Authorization" Target="Microsoft.AspNet.Identity.EntityFramework 2.1.0" Category="Installed Package" />
+    <Link Source="Tests\App.BluePrint.Test.Authorization" Target="NSubstitute 1.8.1.0" Category="Installed Package" />
+    <Link Source="Tests\App.BluePrint.Test.Authorization" Target="Shouldly 2.3.1" Category="Installed Package" />
+    <Link Source="Tests\App.BluePrint.Test.Authorization" Target="xunit 1.9.2" Category="Installed Package" />
+    <Link Source="Abp 0.5.0.0" Target="Castle.LoggingFacility 3.3.0" Category="Package Dependency" />
+    <Link Source="Abp 0.5.0.0" Target="Microsoft.Bcl.Immutable 1.0.34" Category="Package Dependency" />
+    <Link Source="Abp.EntityFramework 0.5.0.0" Target="Castle.Windsor 3.3.0" Category="Package Dependency" />
+    <Link Source="Abp.EntityFramework 0.5.0.0" Target="EntityFramework 6.1.2" Category="Package Dependency" />
+    <Link Source="Abp.EntityFramework 0.5.0.0" Target="Abp 0.5.0.0" Category="Package Dependency" />
+    <Link Source="Castle.LoggingFacility 3.3.0" Target="Castle.Core 3.3.0" Category="Package Dependency" />
+    <Link Source="Castle.LoggingFacility 3.3.0" Target="Castle.Windsor 3.3.0" Category="Package Dependency" />
+    <Link Source="Castle.Windsor 3.3.0" Target="Castle.Core 3.3.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Identity.EntityFramework 2.1.0" Target="Microsoft.AspNet.Identity.Core 2.1.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Identity.EntityFramework 2.1.0" Target="EntityFramework 6.1.2" Category="Package Dependency" />
+    <Link Source="Framework\App.BluePrint.UserFramework" Target="Abp.EntityFramework 0.5.0.0" Category="Installed Package" />
+    <Link Source="Framework\App.BluePrint.UserFramework" Target="Microsoft.AspNet.Identity.EntityFramework 2.1.0" Category="Installed Package" />
+    <Link Source="Abp 0.5.0.0" Target="Castle.LoggingFacility 3.3.0" Category="Package Dependency" />
+    <Link Source="Abp 0.5.0.0" Target="Microsoft.Bcl.Immutable 1.0.34" Category="Package Dependency" />
+    <Link Source="Abp.EntityFramework 0.5.0.0" Target="Castle.Windsor 3.3.0" Category="Package Dependency" />
+    <Link Source="Abp.EntityFramework 0.5.0.0" Target="EntityFramework 6.1.2" Category="Package Dependency" />
+    <Link Source="Abp.EntityFramework 0.5.0.0" Target="Abp 0.5.0.0" Category="Package Dependency" />
+    <Link Source="Castle.LoggingFacility 3.3.0" Target="Castle.Core 3.3.3" Category="Package Dependency" />
+    <Link Source="Castle.LoggingFacility 3.3.0" Target="Castle.Windsor 3.3.0" Category="Package Dependency" />
+    <Link Source="Castle.Windsor 3.3.0" Target="Castle.Core 3.3.3" Category="Package Dependency" />
+    <Link Source="Framework\App.BluePrint.EntityFramework" Target="Abp.EntityFramework 0.5.0.0" Category="Installed Package" />
+    <Link Source="Abp 0.5.0.0" Target="Castle.LoggingFacility 3.3.0" Category="Package Dependency" />
+    <Link Source="Abp 0.5.0.0" Target="Microsoft.Bcl.Immutable 1.0.34" Category="Package Dependency" />
+    <Link Source="Abp.AutoMapper 0.5.0.0" Target="AutoMapper 3.3.0" Category="Package Dependency" />
+    <Link Source="Abp.AutoMapper 0.5.0.0" Target="Castle.Core 3.3.3" Category="Package Dependency" />
+    <Link Source="Abp.AutoMapper 0.5.0.0" Target="Abp 0.5.0.0" Category="Package Dependency" />
+    <Link Source="Abp.Web 0.5.0.0" Target="Castle.Windsor 3.3.0" Category="Package Dependency" />
+    <Link Source="Abp.Web 0.5.0.0" Target="Abp 0.5.0.0" Category="Package Dependency" />
+    <Link Source="Abp.Web.Api 0.5.0.0" Target="Castle.LoggingFacility 3.3.0" Category="Package Dependency" />
+    <Link Source="Abp.Web.Api 0.5.0.0" Target="Microsoft.AspNet.WebApi 5.2.2" Category="Package Dependency" />
+    <Link Source="Abp.Web.Api 0.5.0.0" Target="Microsoft.Bcl.Immutable 1.0.34" Category="Package Dependency" />
+    <Link Source="Abp.Web.Api 0.5.0.0" Target="Abp.Web 0.5.0.0" Category="Package Dependency" />
+    <Link Source="Abp.Web.Api 0.5.0.0" Target="Abp 0.5.0.0" Category="Package Dependency" />
+    <Link Source="Castle.LoggingFacility 3.3.0" Target="Castle.Core 3.3.3" Category="Package Dependency" />
+    <Link Source="Castle.LoggingFacility 3.3.0" Target="Castle.Windsor 3.3.0" Category="Package Dependency" />
+    <Link Source="Castle.Windsor 3.3.0" Target="Castle.Core 3.3.3" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi 5.2.2" Target="Microsoft.AspNet.WebApi.WebHost 5.2.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 5.2.2" Target="Newtonsoft.Json 6.0.7" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 5.2.2" Target="Newtonsoft.Json 6.0.7" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Core 5.2.2" Target="Microsoft.AspNet.WebApi.Client 5.2.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 5.2.2" Target="Microsoft.AspNet.WebApi.Core 5.2.2" Category="Package Dependency" />
+    <Link Source="Web\App.BluePrint.WebApi" Target="Abp.AutoMapper 0.5.0.0" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.WebApi" Target="Abp.Web.Api 0.5.0.0" Category="Installed Package" />
+    <Link Source="Abp 0.5.0.0" Target="Castle.LoggingFacility 3.3.0" Category="Package Dependency" />
+    <Link Source="Abp 0.5.0.0" Target="Microsoft.Bcl.Immutable 1.0.34" Category="Package Dependency" />
+    <Link Source="Abp.AutoMapper 0.5.0.0" Target="AutoMapper 3.3.0" Category="Package Dependency" />
+    <Link Source="Abp.AutoMapper 0.5.0.0" Target="Castle.Core 3.3.3" Category="Package Dependency" />
+    <Link Source="Abp.AutoMapper 0.5.0.0" Target="Abp 0.5.0.0" Category="Package Dependency" />
+    <Link Source="Abp.Web 0.5.0.0" Target="Castle.Windsor 3.3.0" Category="Package Dependency" />
+    <Link Source="Abp.Web 0.5.0.0" Target="Abp 0.5.0.0" Category="Package Dependency" />
+    <Link Source="Abp.Web.Api 0.5.0.0" Target="Castle.LoggingFacility 3.3.0" Category="Package Dependency" />
+    <Link Source="Abp.Web.Api 0.5.0.0" Target="Microsoft.AspNet.WebApi 5.2.2" Category="Package Dependency" />
+    <Link Source="Abp.Web.Api 0.5.0.0" Target="Microsoft.Bcl.Immutable 1.0.34" Category="Package Dependency" />
+    <Link Source="Abp.Web.Api 0.5.0.0" Target="Abp.Web 0.5.0.0" Category="Package Dependency" />
+    <Link Source="Abp.Web.Api 0.5.0.0" Target="Abp 0.5.0.0" Category="Package Dependency" />
+    <Link Source="Abp.Web.Mvc 0.5.0.0" Target="Castle.LoggingFacility 3.3.0" Category="Package Dependency" />
+    <Link Source="Abp.Web.Mvc 0.5.0.0" Target="Microsoft.AspNet.Mvc 5.2.2" Category="Package Dependency" />
+    <Link Source="Abp.Web.Mvc 0.5.0.0" Target="Newtonsoft.Json 6.0.7" Category="Package Dependency" />
+    <Link Source="Abp.Web.Mvc 0.5.0.0" Target="Abp.Web 0.5.0.0" Category="Package Dependency" />
+    <Link Source="Abp.Web.Mvc 0.5.0.0" Target="Abp 0.5.0.0" Category="Package Dependency" />
+    <Link Source="Abp.Web.Resources 0.5.0.0" Target="Abp 0.5.0.0" Category="Package Dependency" />
+    <Link Source="bootstrap 3.3.1" Target="jQuery 2.1.1" Category="Package Dependency" />
+    <Link Source="Castle.Core-log4net 3.3.3" Target="Castle.Core 3.3.3" Category="Package Dependency" />
+    <Link Source="Castle.Core-log4net 3.3.3" Target="log4net 1.2.10" Category="Package Dependency" />
+    <Link Source="Castle.LoggingFacility 3.3.0" Target="Castle.Core 3.3.3" Category="Package Dependency" />
+    <Link Source="Castle.LoggingFacility 3.3.0" Target="Castle.Windsor 3.3.0" Category="Package Dependency" />
+    <Link Source="Castle.Windsor 3.3.0" Target="Castle.Core 3.3.3" Category="Package Dependency" />
+    <Link Source="Castle.Windsor-log4net 3.3.0" Target="Castle.Core-log4net 3.3.3" Category="Package Dependency" />
+    <Link Source="Castle.Windsor-log4net 3.3.0" Target="Castle.LoggingFacility 3.3.0" Category="Package Dependency" />
+    <Link Source="jQuery.BlockUI 2.70" Target="jQuery 2.1.1" Category="Package Dependency" />
+    <Link Source="jQuery.UI.Combined 1.11.2" Target="jQuery 2.1.1" Category="Package Dependency" />
+    <Link Source="jQuery.Validation 1.13.1" Target="jQuery 2.1.1" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Mvc 5.2.2" Target="Microsoft.AspNet.WebPages 3.2.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Mvc 5.2.2" Target="Microsoft.AspNet.Razor 3.2.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Web.Optimization 1.1.3" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Web.Optimization 1.1.3" Target="WebGrease 1.6.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi 5.2.2" Target="Microsoft.AspNet.WebApi.WebHost 5.2.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 5.2.2" Target="Newtonsoft.Json 6.0.7" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 5.2.2" Target="Newtonsoft.Json 6.0.7" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Core 5.2.2" Target="Microsoft.AspNet.WebApi.Client 5.2.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 5.2.2" Target="Microsoft.AspNet.WebApi.Core 5.2.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 3.2.2" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 3.2.2" Target="Microsoft.AspNet.Razor 3.2.2" Category="Package Dependency" />
+    <Link Source="toastr 2.1.0" Target="jQuery 2.1.1" Category="Package Dependency" />
+    <Link Source="WebGrease 1.6.0" Target="Antlr 3.5.0.2" Category="Package Dependency" />
+    <Link Source="WebGrease 1.6.0" Target="Newtonsoft.Json 6.0.7" Category="Package Dependency" />
+    <Link Source="Web\App.BluePrint.Web" Target="Abp.AutoMapper 0.5.0.0" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="Abp.Web.Api 0.5.0.0" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="Abp.Web.Mvc 0.5.0.0" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="Abp.Web.Resources 0.5.0.0" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="Angular.UI.Bootstrap 0.12.0" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="Angular.UI.UI-Router 0.2.13" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="Angular.UI.Utils 0.1.1" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="angularjs 1.3.8" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="bootstrap 3.3.1" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="Castle.Windsor-log4net 3.3.0" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="EntityFramework 6.1.2" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="FontAwesome 4.2.0" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="jQuery.BlockUI 2.70" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="jQuery.UI.Combined 1.11.2" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="jQuery.Validation 1.13.1" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="json2 1.0.2" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="Microsoft.AspNet.Web.Optimization 1.1.3" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="Modernizr 2.8.3" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="Moment.js 2.8.4" Category="Installed Package" />
+    <Link Source="Web\App.BluePrint.Web" Target="toastr 2.1.0" Category="Installed Package" />
+    <Link Source="Abp 0.5.0.0" Target="Castle.LoggingFacility 3.3.0" Category="Package Dependency" />
+    <Link Source="Abp 0.5.0.0" Target="Microsoft.Bcl.Immutable 1.0.34" Category="Package Dependency" />
+    <Link Source="Castle.LoggingFacility 3.3.0" Target="Castle.Core 3.3.3" Category="Package Dependency" />
+    <Link Source="Castle.LoggingFacility 3.3.0" Target="Castle.Windsor 3.3.0" Category="Package Dependency" />
+    <Link Source="Castle.Windsor 3.3.0" Target="Castle.Core 3.3.3" Category="Package Dependency" />
+    <Link Source="BusinessLayer\App.BluePrint.Core" Target="Abp 0.5.0.0" Category="Installed Package" />
+    <Link Source="Abp 0.5.0.0" Target="Castle.LoggingFacility 3.3.0" Category="Package Dependency" />
+    <Link Source="Abp 0.5.0.0" Target="Microsoft.Bcl.Immutable 1.0.34" Category="Package Dependency" />
+    <Link Source="Abp.AutoMapper 0.5.0.0" Target="AutoMapper 3.3.0" Category="Package Dependency" />
+    <Link Source="Abp.AutoMapper 0.5.0.0" Target="Castle.Core 3.3.3" Category="Package Dependency" />
+    <Link Source="Abp.AutoMapper 0.5.0.0" Target="Abp 0.5.0.0" Category="Package Dependency" />
+    <Link Source="Castle.LoggingFacility 3.3.0" Target="Castle.Core 3.3.3" Category="Package Dependency" />
+    <Link Source="Castle.LoggingFacility 3.3.0" Target="Castle.Windsor 3.3.0" Category="Package Dependency" />
+    <Link Source="Castle.Windsor 3.3.0" Target="Castle.Core 3.3.3" Category="Package Dependency" />
+    <Link Source="BusinessLayer\App.BluePrint.Application" Target="Abp.AutoMapper 0.5.0.0" Category="Installed Package" />
+  </Links>
+  <Categories>
+    <Category Id="Project" />
+    <Category Id="Package" />
+  </Categories>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Project" ValueLabel="True">
+      <Condition Expression="HasCategory('Project')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Package Dependency" ValueLabel="True">
+      <Condition Expression="HasCategory('Package Dependency')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>

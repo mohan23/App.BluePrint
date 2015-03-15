@@ -1,0 +1,54 @@
+DEBUG 2015-02-10 12:38:35,252 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-02-10 12:38:48,246 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-02-10 12:38:48,261 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.5.1.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:38:48,278 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.5.1.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:38:48,278 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.5.1.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:38:48,293 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.UserManagement.Framework.FrameworkCoreModule, Abp.UserManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:38:48,308 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.UserManagement.EntityFramework.AbpUserManagementEFModule, Abp.UserManagement.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:38:48,324 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.5.1.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:38:48,324 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.5.1.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:38:48,340 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.5.1.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:38:48,355 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.ApplicationModule, App.BluePrint.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:38:48,355 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.CoreModule, App.BluePrint.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:38:48,371 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.DataModule, App.BluePrint.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:38:48,371 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.Web.WebModule, App.BluePrint.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:38:48,449 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.WebApiModule, App.BluePrint.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:38:48,480 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-02-10 12:38:53,643 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes defines auto mapping attributes
+DEBUG 2015-02-10 12:38:53,658 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - App.BluePrint.UserService.UserEntity
+DEBUG 2015-02-10 12:50:45,080 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-02-10 12:50:50,367 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-02-10 12:50:50,383 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.5.1.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:50:50,399 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.5.1.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:50:50,414 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.5.1.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:50:50,414 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.UserManagement.Framework.FrameworkCoreModule, Abp.UserManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:50:50,430 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.UserManagement.EntityFramework.AbpUserManagementEFModule, Abp.UserManagement.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:50:50,430 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.5.1.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:50:50,445 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.5.1.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:50:50,461 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.5.1.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:50:50,461 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.ApplicationModule, App.BluePrint.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:50:50,476 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.CoreModule, App.BluePrint.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:50:50,476 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.DataModule, App.BluePrint.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:50:50,492 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.Web.WebModule, App.BluePrint.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:50:50,492 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.WebApiModule, App.BluePrint.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:50:50,508 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-02-10 12:50:54,688 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes defines auto mapping attributes
+DEBUG 2015-02-10 12:50:54,766 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - App.BluePrint.UserService.UserEntity
+DEBUG 2015-02-10 12:51:10,659 [13   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-02-10 12:51:20,079 [13   ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-02-10 12:51:20,126 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.5.1.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:51:20,142 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.5.1.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:51:20,173 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.5.1.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:51:20,189 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.UserManagement.Framework.FrameworkCoreModule, Abp.UserManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:51:20,204 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.UserManagement.EntityFramework.AbpUserManagementEFModule, Abp.UserManagement.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:51:20,220 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.5.1.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:51:20,251 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.5.1.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:51:20,251 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.5.1.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:51:20,267 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.ApplicationModule, App.BluePrint.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:51:20,284 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.CoreModule, App.BluePrint.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:51:20,298 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.DataModule, App.BluePrint.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:51:20,329 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.Web.WebModule, App.BluePrint.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:51:20,344 [13   ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.WebApiModule, App.BluePrint.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-02-10 12:51:20,364 [13   ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-02-10 12:51:28,051 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes defines auto mapping attributes
+DEBUG 2015-02-10 12:51:28,102 [13   ] Abp.AutoMapper.AbpAutoMapperModule       - App.BluePrint.UserService.UserEntity

@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Bower.js.1.2.7.10\build\bower.js.props" Condition="Exists('..\packages\Bower.js.1.2.7.10\build\bower.js.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8B0D8821-2E03-4B33-9E4F-2884EFAFDDA0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App.BluePrint.Design</RootNamespace>
+    <AssemblyName>App.BluePrint.Design</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <NuGetPackageImportStamp>3a1dab26</NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.2\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.2\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.2\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="npmPlaceholder.txt" />
+    <Content Include="Scripts\lib\angular-animate\angular-animate.js" />
+    <Content Include="Scripts\lib\angular-animate\angular-animate.min.js" />
+    <Content Include="Scripts\lib\angular-aria\angular-aria.js" />
+    <Content Include="Scripts\lib\angular-aria\angular-aria.min.js" />
+    <Content Include="Scripts\lib\angular-material\angular-material.css" />
+    <Content Include="Scripts\lib\angular-material\angular-material.js" />
+    <Content Include="Scripts\lib\angular-material\angular-material.min.css" />
+    <Content Include="Scripts\lib\angular-material\angular-material.min.js" />
+    <Content Include="Scripts\lib\angular-material\default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\backdrop\backdrop-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\backdrop\backdrop.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\backdrop\backdrop.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\bottomSheet\bottomSheet-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\bottomSheet\bottomSheet.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\bottomSheet\bottomSheet.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\button\button-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\button\button.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\button\button.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\card\card-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\card\card.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\card\card.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\checkbox\checkbox-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\checkbox\checkbox.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\checkbox\checkbox.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\content\content-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\content\content.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\content\content.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\core\core.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\core\core.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\core\default-theme.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\dialog\dialog-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\dialog\dialog.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\dialog\dialog.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\divider\divider-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\divider\divider.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\divider\divider.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\icon\icon.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\icon\icon.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\input\input-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\input\input.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\input\input.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\list\list.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\list\list.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\menu\menu.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\menu\menu.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\progressCircular\progressCircular-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\progressCircular\progressCircular.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\progressCircular\progressCircular.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\progressLinear\progressLinear-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\progressLinear\progressLinear.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\progressLinear\progressLinear.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\radioButton\radioButton-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\radioButton\radioButton.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\radioButton\radioButton.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\sidenav\sidenav-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\sidenav\sidenav.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\sidenav\sidenav.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\slider\slider-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\slider\slider.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\slider\slider.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\sticky\sticky.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\sticky\sticky.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\subheader\subheader-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\subheader\subheader.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\subheader\subheader.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\swipe\swipe.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\switch\switch-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\switch\switch.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\switch\switch.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\tabs\tabs-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\tabs\tabs.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\tabs\tabs.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\textField\textField-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\textField\textField.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\textField\textField.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\toast\toast-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\toast\toast.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\toast\toast.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\toolbar\toolbar-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\toolbar\toolbar.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\toolbar\toolbar.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\tooltip\tooltip-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\tooltip\tooltip.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\tooltip\tooltip.js" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\whiteframe\whiteframe.css" />
+    <Content Include="Scripts\lib\angular-material\modules\closure\whiteframe\whiteframe.js" />
+    <Content Include="Scripts\lib\angular-material\modules\css\angular-material-layout.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\backdrop\backdrop-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\backdrop\backdrop-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\backdrop\backdrop.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\backdrop\backdrop.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\backdrop\backdrop.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\backdrop\backdrop.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\bottomSheet\bottomSheet-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\bottomSheet\bottomSheet-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\bottomSheet\bottomSheet.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\bottomSheet\bottomSheet.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\bottomSheet\bottomSheet.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\bottomSheet\bottomSheet.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\button\button-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\button\button-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\button\button.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\button\button.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\button\button.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\button\button.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\card\card-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\card\card-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\card\card.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\card\card.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\card\card.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\card\card.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\checkbox\checkbox-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\checkbox\checkbox-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\checkbox\checkbox.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\checkbox\checkbox.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\checkbox\checkbox.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\checkbox\checkbox.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\content\content-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\content\content-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\content\content.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\content\content.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\content\content.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\content\content.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\core\core.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\core\core.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\core\core.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\core\core.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\core\default-theme.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\dialog\dialog-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\dialog\dialog-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\dialog\dialog.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\dialog\dialog.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\dialog\dialog.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\dialog\dialog.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\divider\divider-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\divider\divider-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\divider\divider.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\divider\divider.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\divider\divider.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\divider\divider.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\icon\icon.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\icon\icon.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\icon\icon.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\icon\icon.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\input\input-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\input\input-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\input\input.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\input\input.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\input\input.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\input\input.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\list\list.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\list\list.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\list\list.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\list\list.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\menu\menu.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\menu\menu.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\menu\menu.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\menu\menu.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\progressCircular\progressCircular-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\progressCircular\progressCircular-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\progressCircular\progressCircular.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\progressCircular\progressCircular.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\progressCircular\progressCircular.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\progressCircular\progressCircular.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\progressLinear\progressLinear-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\progressLinear\progressLinear-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\progressLinear\progressLinear.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\progressLinear\progressLinear.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\progressLinear\progressLinear.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\progressLinear\progressLinear.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\radioButton\radioButton-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\radioButton\radioButton-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\radioButton\radioButton.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\radioButton\radioButton.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\radioButton\radioButton.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\radioButton\radioButton.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\sidenav\sidenav-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\sidenav\sidenav-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\sidenav\sidenav.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\sidenav\sidenav.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\sidenav\sidenav.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\sidenav\sidenav.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\slider\slider-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\slider\slider-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\slider\slider.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\slider\slider.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\slider\slider.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\slider\slider.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\sticky\sticky.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\sticky\sticky.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\sticky\sticky.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\sticky\sticky.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\subheader\subheader-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\subheader\subheader-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\subheader\subheader.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\subheader\subheader.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\subheader\subheader.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\subheader\subheader.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\swipe\swipe.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\swipe\swipe.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\switch\switch-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\switch\switch-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\switch\switch.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\switch\switch.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\switch\switch.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\switch\switch.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\tabs\tabs-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\tabs\tabs-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\tabs\tabs.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\tabs\tabs.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\tabs\tabs.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\tabs\tabs.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\textField\textField-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\textField\textField-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\textField\textField.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\textField\textField.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\textField\textField.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\textField\textField.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\toast\toast-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\toast\toast-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\toast\toast.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\toast\toast.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\toast\toast.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\toast\toast.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\toolbar\toolbar-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\toolbar\toolbar-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\toolbar\toolbar.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\toolbar\toolbar.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\toolbar\toolbar.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\toolbar\toolbar.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\tooltip\tooltip-default-theme.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\tooltip\tooltip-default-theme.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\tooltip\tooltip.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\tooltip\tooltip.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\tooltip\tooltip.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\tooltip\tooltip.min.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\whiteframe\whiteframe.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\whiteframe\whiteframe.js" />
+    <Content Include="Scripts\lib\angular-material\modules\js\whiteframe\whiteframe.min.css" />
+    <Content Include="Scripts\lib\angular-material\modules\js\whiteframe\whiteframe.min.js" />
+    <Content Include="Scripts\lib\angular-sanitize\angular-sanitize.js" />
+    <Content Include="Scripts\lib\angular-sanitize\angular-sanitize.min.js" />
+    <Content Include="Scripts\lib\angular-ui-router\release\angular-ui-router.js" />
+    <Content Include="Scripts\lib\angular-ui-router\release\angular-ui-router.min.js" />
+    <Content Include="Scripts\lib\angular-ui-router\src\common.js" />
+    <Content Include="Scripts\lib\angular-ui-router\src\resolve.js" />
+    <Content Include="Scripts\lib\angular-ui-router\src\state.js" />
+    <Content Include="Scripts\lib\angular-ui-router\src\stateDirectives.js" />
+    <Content Include="Scripts\lib\angular-ui-router\src\stateFilters.js" />
+    <Content Include="Scripts\lib\angular-ui-router\src\templateFactory.js" />
+    <Content Include="Scripts\lib\angular-ui-router\src\urlMatcherFactory.js" />
+    <Content Include="Scripts\lib\angular-ui-router\src\urlRouter.js" />
+    <Content Include="Scripts\lib\angular-ui-router\src\view.js" />
+    <Content Include="Scripts\lib\angular-ui-router\src\viewDirective.js" />
+    <Content Include="Scripts\lib\angular-ui-router\src\viewScroll.js" />
+    <Content Include="Scripts\lib\angular\angular-csp.css" />
+    <Content Include="Scripts\lib\angular\angular.min.js" />
+    <Content Include="Scripts\lib\bootstrap-material-design\bootstrap-elements.html" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\css\material-wfont.css" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\css\material-wfont.min.css" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\css\material.css" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\css\material.min.css" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\css\ripples.css" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\css\ripples.min.css" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\fonts\LICENSE.txt" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\fonts\Material-Design-Icons.svg" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\js\material.js" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\js\material.min.js" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\js\ripples.js" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\js\ripples.min.js" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\test.html" />
+    <Content Include="Scripts\lib\bootstrap-material-design\fonts\LICENSE.txt" />
+    <Content Include="Scripts\lib\bootstrap-material-design\fonts\Material-Design-Icons.svg" />
+    <Content Include="Scripts\lib\bootstrap-material-design\Gruntfile.js" />
+    <Content Include="Scripts\lib\bootstrap-material-design\meteor\example\client\bmd.css" />
+    <Content Include="Scripts\lib\bootstrap-material-design\meteor\example\client\bmd.html" />
+    <Content Include="Scripts\lib\bootstrap-material-design\meteor\example\client\bmd.js" />
+    <Content Include="Scripts\lib\bootstrap-material-design\meteor\init.js" />
+    <Content Include="Scripts\lib\bootstrap-material-design\meteor\package-noglyph.js" />
+    <Content Include="Scripts\lib\bootstrap-material-design\meteor\package-noicons.js" />
+    <Content Include="Scripts\lib\bootstrap-material-design\meteor\package.js" />
+    <Content Include="Scripts\lib\bootstrap-material-design\meteor\test-noicons.js" />
+    <Content Include="Scripts\lib\bootstrap-material-design\meteor\test.js" />
+    <Content Include="Scripts\lib\bootstrap-material-design\scripts\material.js" />
+    <Content Include="Scripts\lib\bootstrap-material-design\scripts\ripples.js" />
+    <Content Include="Scripts\lib\jquery\dist\jquery.js" />
+    <Content Include="Scripts\lib\jquery\dist\jquery.min.js" />
+    <Content Include="Scripts\lib\jquery\MIT-LICENSE.txt" />
+    <Content Include="Scripts\lib\jquery\src\ajax.js" />
+    <Content Include="Scripts\lib\jquery\src\ajax\jsonp.js" />
+    <Content Include="Scripts\lib\jquery\src\ajax\load.js" />
+    <Content Include="Scripts\lib\jquery\src\ajax\parseJSON.js" />
+    <Content Include="Scripts\lib\jquery\src\ajax\parseXML.js" />
+    <Content Include="Scripts\lib\jquery\src\ajax\script.js" />
+    <Content Include="Scripts\lib\jquery\src\ajax\var\nonce.js" />
+    <Content Include="Scripts\lib\jquery\src\ajax\var\rquery.js" />
+    <Content Include="Scripts\lib\jquery\src\ajax\xhr.js" />
+    <Content Include="Scripts\lib\jquery\src\attributes.js" />
+    <Content Include="Scripts\lib\jquery\src\attributes\attr.js" />
+    <Content Include="Scripts\lib\jquery\src\attributes\classes.js" />
+    <Content Include="Scripts\lib\jquery\src\attributes\prop.js" />
+    <Content Include="Scripts\lib\jquery\src\attributes\support.js" />
+    <Content Include="Scripts\lib\jquery\src\attributes\val.js" />
+    <Content Include="Scripts\lib\jquery\src\callbacks.js" />
+    <Content Include="Scripts\lib\jquery\src\core.js" />
+    <Content Include="Scripts\lib\jquery\src\core\access.js" />
+    <Content Include="Scripts\lib\jquery\src\core\init.js" />
+    <Content Include="Scripts\lib\jquery\src\core\parseHTML.js" />
+    <Content Include="Scripts\lib\jquery\src\core\ready.js" />
+    <Content Include="Scripts\lib\jquery\src\core\var\rsingleTag.js" />
+    <Content Include="Scripts\lib\jquery\src\css.js" />
+    <Content Include="Scripts\lib\jquery\src\css\addGetHookIf.js" />
+    <Content Include="Scripts\lib\jquery\src\css\curCSS.js" />
+    <Content Include="Scripts\lib\jquery\src\css\defaultDisplay.js" />
+    <Content Include="Scripts\lib\jquery\src\css\hiddenVisibleSelectors.js" />
+    <Content Include="Scripts\lib\jquery\src\css\support.js" />
+    <Content Include="Scripts\lib\jquery\src\css\swap.js" />
+    <Content Include="Scripts\lib\jquery\src\css\var\cssExpand.js" />
+    <Content Include="Scripts\lib\jquery\src\css\var\getStyles.js" />
+    <Content Include="Scripts\lib\jquery\src\css\var\isHidden.js" />
+    <Content Include="Scripts\lib\jquery\src\css\var\rmargin.js" />
+    <Content Include="Scripts\lib\jquery\src\css\var\rnumnonpx.js" />
+    <Content Include="Scripts\lib\jquery\src\data.js" />
+    <Content Include="Scripts\lib\jquery\src\data\accepts.js" />
+    <Content Include="Scripts\lib\jquery\src\data\Data.js" />
+    <Content Include="Scripts\lib\jquery\src\data\var\data_priv.js" />
+    <Content Include="Scripts\lib\jquery\src\data\var\data_user.js" />
+    <Content Include="Scripts\lib\jquery\src\deferred.js" />
+    <Content Include="Scripts\lib\jquery\src\deprecated.js" />
+    <Content Include="Scripts\lib\jquery\src\dimensions.js" />
+    <Content Include="Scripts\lib\jquery\src\effects.js" />
+    <Content Include="Scripts\lib\jquery\src\effects\animatedSelector.js" />
+    <Content Include="Scripts\lib\jquery\src\effects\Tween.js" />
+    <Content Include="Scripts\lib\jquery\src\event.js" />
+    <Content Include="Scripts\lib\jquery\src\event\ajax.js" />
+    <Content Include="Scripts\lib\jquery\src\event\alias.js" />
+    <Content Include="Scripts\lib\jquery\src\event\support.js" />
+    <Content Include="Scripts\lib\jquery\src\exports\amd.js" />
+    <Content Include="Scripts\lib\jquery\src\exports\global.js" />
+    <Content Include="Scripts\lib\jquery\src\intro.js" />
+    <Content Include="Scripts\lib\jquery\src\jquery.js" />
+    <Content Include="Scripts\lib\jquery\src\manipulation.js" />
+    <Content Include="Scripts\lib\jquery\src\manipulation\support.js" />
+    <Content Include="Scripts\lib\jquery\src\manipulation\var\rcheckableType.js" />
+    <Content Include="Scripts\lib\jquery\src\manipulation\_evalUrl.js" />
+    <Content Include="Scripts\lib\jquery\src\offset.js" />
+    <Content Include="Scripts\lib\jquery\src\outro.js" />
+    <Content Include="Scripts\lib\jquery\src\queue.js" />
+    <Content Include="Scripts\lib\jquery\src\queue\delay.js" />
+    <Content Include="Scripts\lib\jquery\src\selector-native.js" />
+    <Content Include="Scripts\lib\jquery\src\selector-sizzle.js" />
+    <Content Include="Scripts\lib\jquery\src\selector.js" />
+    <Content Include="Scripts\lib\jquery\src\serialize.js" />
+    <Content Include="Scripts\lib\jquery\src\sizzle\dist\sizzle.js" />
+    <Content Include="Scripts\lib\jquery\src\sizzle\dist\sizzle.min.js" />
+    <Content Include="Scripts\lib\jquery\src\traversing.js" />
+    <Content Include="Scripts\lib\jquery\src\traversing\findFilter.js" />
+    <Content Include="Scripts\lib\jquery\src\traversing\var\rneedsContext.js" />
+    <Content Include="Scripts\lib\jquery\src\var\arr.js" />
+    <Content Include="Scripts\lib\jquery\src\var\class2type.js" />
+    <Content Include="Scripts\lib\jquery\src\var\concat.js" />
+    <Content Include="Scripts\lib\jquery\src\var\hasOwn.js" />
+    <Content Include="Scripts\lib\jquery\src\var\indexOf.js" />
+    <Content Include="Scripts\lib\jquery\src\var\pnum.js" />
+    <Content Include="Scripts\lib\jquery\src\var\push.js" />
+    <Content Include="Scripts\lib\jquery\src\var\rnotwhite.js" />
+    <Content Include="Scripts\lib\jquery\src\var\slice.js" />
+    <Content Include="Scripts\lib\jquery\src\var\strundefined.js" />
+    <Content Include="Scripts\lib\jquery\src\var\support.js" />
+    <Content Include="Scripts\lib\jquery\src\var\toString.js" />
+    <Content Include="Scripts\lib\jquery\src\wrap.js" />
+    <Content Include="Scripts\lib\readmelibs.txt" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include=".bin\bower.cmd" />
+    <None Include=".bin\git.cmd" />
+    <None Include=".bin\node.cmd" />
+    <Content Include="bower.json" />
+    <Content Include=".bowerrc" />
+    <Content Include="Scripts\lib\bootstrap-material-design\.bower.json" />
+    <Content Include="Scripts\lib\bootstrap-material-design\bower.json" />
+    <Content Include="Scripts\lib\bootstrap-material-design\CHANGELOG.md" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\css\material-wfont.css.map" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\css\material-wfont.min.css.map" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\css\material.css.map" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\css\material.min.css.map" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\css\ripples.css.map" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\css\ripples.min.css.map" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\fonts\Material-Design-Icons.eot" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\fonts\Material-Design-Icons.ttf" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\fonts\Material-Design-Icons.woff" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\js\material.min.js.map" />
+    <Content Include="Scripts\lib\bootstrap-material-design\dist\js\ripples.min.js.map" />
+    <Content Include="Scripts\lib\bootstrap-material-design\fonts\Material-Design-Icons.eot" />
+    <Content Include="Scripts\lib\bootstrap-material-design\fonts\Material-Design-Icons.ttf" />
+    <Content Include="Scripts\lib\bootstrap-material-design\fonts\Material-Design-Icons.woff" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\material-wfont.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\material.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\ripples.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_alerts.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_buttons.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_cards.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_checkboxes.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_colors.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_dialogs.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_dividers.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_icons-material-design.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_icons.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_inputs.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_labels.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_lists.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_mixins.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_navbar.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_panels.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_plugin-dropdownjs.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_plugin-nouislider.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_plugin-selectize.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_plugin-snackbarjs.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_popups.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_progress.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_radios.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_shadows.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_tabs.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_togglebutton.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_variables.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\less\_welljumbo.less" />
+    <Content Include="Scripts\lib\bootstrap-material-design\LICENSE.md" />
+    <Content Include="Scripts\lib\bootstrap-material-design\meteor\example\run.bat" />
+    <Content Include="Scripts\lib\bootstrap-material-design\meteor\example\run.sh" />
+    <Content Include="Scripts\lib\bootstrap-material-design\meteor\README.md" />
+    <Content Include="Scripts\lib\bootstrap-material-design\package.json" />
+    <Content Include="Scripts\lib\bootstrap-material-design\README.md" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\material-wfont.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\material.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\ripples.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_alerts.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_animations.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_buttons.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_cards.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_checkboxes.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_icons-material-design.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_icons.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_inputs.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_lists.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_mixins.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_navbar.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_plugin-nouislider.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_plugin-snackbarjs.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_popups.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_progress.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_radios.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_shadows.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_tabs.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_variables.scss" />
+    <Content Include="Scripts\lib\bootstrap-material-design\sass\_welljumbo.scss" />
+    <Content Include="Scripts\lib\jquery\.bower.json" />
+    <Content Include="Scripts\lib\jquery\bower.json" />
+    <Content Include="Scripts\lib\jquery\dist\jquery.min.map" />
+    <Content Include="Scripts\lib\jquery\src\sizzle\dist\sizzle.min.map" />
+    <Content Include="Scripts\lib\angular-animate\.bower.json" />
+    <Content Include="Scripts\lib\angular-animate\angular-animate.min.js.map" />
+    <Content Include="Scripts\lib\angular-animate\bower.json" />
+    <Content Include="Scripts\lib\angular-animate\package.json" />
+    <Content Include="Scripts\lib\angular-animate\README.md" />
+    <Content Include="Scripts\lib\angular-aria\.bower.json" />
+    <Content Include="Scripts\lib\angular-aria\angular-aria.min.js.map" />
+    <Content Include="Scripts\lib\angular-aria\bower.json" />
+    <Content Include="Scripts\lib\angular-aria\package.json" />
+    <Content Include="Scripts\lib\angular-aria\README.md" />
+    <Content Include="Scripts\lib\angular-material\.bower.json" />
+    <Content Include="Scripts\lib\angular-material\bower.json" />
+    <Content Include="Scripts\lib\angular-material\LICENSE" />
+    <Content Include="Scripts\lib\angular-material\modules\js\backdrop\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\bottomSheet\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\button\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\card\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\checkbox\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\content\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\core\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\dialog\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\divider\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\icon\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\input\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\list\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\menu\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\progressCircular\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\progressLinear\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\radioButton\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\sidenav\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\slider\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\sticky\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\subheader\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\swipe\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\switch\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\tabs\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\textField\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\toast\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\toolbar\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\tooltip\bower.json" />
+    <Content Include="Scripts\lib\angular-material\modules\js\whiteframe\bower.json" />
+    <Content Include="Scripts\lib\angular-material\README.md" />
+    <Content Include="Scripts\lib\angular\angular.min.js.map" />
+    <Content Include="Scripts\lib\angular-sanitize\.bower.json" />
+    <Content Include="Scripts\lib\angular-sanitize\angular-sanitize.min.js.map" />
+    <Content Include="Scripts\lib\angular-sanitize\bower.json" />
+    <Content Include="Scripts\lib\angular-sanitize\package.json" />
+    <Content Include="Scripts\lib\angular-sanitize\README.md" />
+    <Content Include="Scripts\lib\angular-ui-router\.bower.json" />
+    <Content Include="Scripts\lib\angular-ui-router\bower.json" />
+    <Content Include="Scripts\lib\angular-ui-router\CHANGELOG.md" />
+    <Content Include="Scripts\lib\angular-ui-router\CONTRIBUTING.md" />
+    <Content Include="Scripts\lib\angular-ui-router\LICENSE" />
+    <Content Include="Scripts\lib\angular-ui-router\README.md" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Scripts\lib\bootstrap-material-design\meteor\example\packages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\lib\angular-ui-router\api\angular-ui-router.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2604</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2604/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties bower_1json__JSONSchema="http://json.schemastore.org/bower" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+    <Error Condition="!Exists('..\packages\Npm.js.1.3.15.4\build\npm.js.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Npm.js.1.3.15.4\build\npm.js.targets'))" />
+    <Error Condition="!Exists('..\packages\Bower.js.1.2.7.10\build\bower.js.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Bower.js.1.2.7.10\build\bower.js.props'))" />
+    <Error Condition="!Exists('..\packages\Bower.js.1.2.7.10\build\bower.js.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Bower.js.1.2.7.10\build\bower.js.targets'))" />
+  </Target>
+  <Import Project="..\packages\Npm.js.1.3.15.4\build\npm.js.targets" Condition="Exists('..\packages\Npm.js.1.3.15.4\build\npm.js.targets')" />
+  <Import Project="..\packages\Bower.js.1.2.7.10\build\bower.js.targets" Condition="Exists('..\packages\Bower.js.1.2.7.10\build\bower.js.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

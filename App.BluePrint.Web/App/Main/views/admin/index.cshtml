@@ -1,0 +1,26 @@
+﻿<div ng-controller="app.views.admin.index as vm">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-3">
+
+                </div>
+            </div>
+            <div class="list-group">
+                <div ng-repeat="user in vm.adminMenu">
+                    <div class="list-group-item">
+                        <div class="row-action-primary">
+                            <i class="mdi-social-person"></i>
+                        </div>
+                        <div class="row-content">
+                            <div class="least-content"></div>
+                            <h4 class="list-group-item-heading">{{user.displayName}}</h4>
+                            <p class="list-group-item-text">{{user.category}} <span class="text-muted">{{user.linkUrl}}</span></p>
+                        </div>
+                    </div>
+                    <div ng-if="!$last" class="list-group-separator"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

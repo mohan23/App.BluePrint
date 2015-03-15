@@ -1,0 +1,66 @@
+﻿body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #eee;
+}
+#LoginArea {
+  width: auto;
+  padding: 0px;
+  margin: 0 0 0 0;
+}
+.loginHeader {
+    width: 90%;
+    background-image: url('/App/Account/images/login1.jpg');
+    height: 258px;
+    background-repeat: no-repeat;
+    background-position: top, center;
+    background-color: white;
+    z-index: 1001;
+}
+.loginLeftBanner {
+    background-image: url('/App/Account/images/login2.jpg');
+    height: 342px;
+    background-repeat: no-repeat;
+    background-position: top, left;
+    background-color: white;
+    z-index: 1000;
+    width: 58%;
+}
+.loginSection {
+    text-align: left;
+    margin-left: 0% !important;
+    background-color: white;
+    margin-right: 5px !important;
+}
+.loginText {
+    font-family: Calibri;
+    font-size: 45px;
+    color: #FF6600;
+    text-align: right;
+    padding-right: 90px;
+    padding-top: 200px;
+    z-index: 1002;
+}
+.loginSection {
+    background-color: white;
+    width:36.08% !important;
+    text-align: left;
+    margin-top: 25px !important;
+    margin-left: 0% !important;
+    background-color: white;
+    margin-right: 5px !important;
+}
+.bs-component{
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+@media only screen and (max-device-width: 480px) {
+    .loginHeader {
+        background-image:none;
+    }
+    .loginLeftBanner{
+        background-image:none;
+        width: 0px;
+    }
+}

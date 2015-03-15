@@ -1,0 +1,55 @@
+﻿<div class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="app.views.layout.header as vm">
+    <div id="headerArea" class="container-fluid">
+        <button type="button" ng-click="toggleLeft()" class="navbar-toggle pull-left">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        @*<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>*@
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a class="navbar-brand" style="padding-top: 1.2px !important;" href="#/"><span><img ng-src="{{vm.logo}}" class="img-responsive" alt="BluePrint Logo" /></span></a></li>
+                <li ng-repeat="menuItem in vm.menu.items" ng-class="{active: vm.currentMenuName == menuItem.name}">
+                    <a ng-href="{{menuItem.url}}"><i class="{{menuItem.icon}}" ng-if="menuItem.icon"></i> {{menuItem.displayName}}</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="" data-toggle="dropdown"><i class="fa fa-user"></i> <span>{{vm.userSession.fullName}}</span> <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="@Url.Action("Logout", "Account")"><i class="fa fa-sign-out"></i> Sign in as Different User</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown" ng-show="{{vm.isMultiLingual}}">
+                    <a href="" data-toggle="dropdown"><i ng-class="vm.currentLanguage.icon"></i> <span>{{vm.currentLanguage.displayName}}</span> <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="language in vm.languages" ng-hide="vm.currentLanguage.name == language.name"><a href="/AbpLocalization/ChangeCulture?cultureName={{language.name}}"><i ng-class="language.icon"></i> {{language.displayName}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" layout="column" md-component-id="leftNavBar" md-is-locked-open="$mdMedia('gt-sm')" style="z-index: 10001;">
+    <md-toolbar class="md-primary">
+        <h1 class="md-toolbar-tools">Navigation</h1>
+    </md-toolbar>
+    <md-content class="md-padding" ng-controller="app.views.layout.sideBar as vm">
+        <div class="container-fluid">
+            <div class="col-sm-12" ng-repeat="menuItem in vm.menu.items">
+                <md-button ng-class="{active: vm.currentMenuName == menuItem.name}">
+                    <i class="{{menuItem.icon}}" ng-click="close()" ng-if="menuItem.icon"></i> {{menuItem.displayName}}
+                </md-button>
+            </div>
+        </div>
+        <button class="btn btn-fab btn-fab-mini btn-raised btn-material-lightyellow" ng-click="close()"><i class="mdi-content-reply"></i></button>
+    </md-content>
+</md-sidenav>
