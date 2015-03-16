@@ -2,7 +2,7 @@
     var controllerId = 'app.views.layout.header';
     var sbControllerId = 'app.views.layout.sideBar';
 
-    angular.module('app').controller(controllerId, ['$rootScope', '$state', 'abp.services.app.session', '$mdSidenav', function ($rootScope, $state, sessionService, $mdSidenav) {
+    angular.module('app').controller(controllerId, ['$rootScope', '$mdToast', '$state', 'abp.services.app.session', '$mdSidenav', function ($rootScope, $mdToast, $state, sessionService, $mdSidenav) {
             var vm = this;
             vm.languages = abp.localization.languages;
             vm.currentLanguage = abp.localization.currentLanguage;
@@ -15,6 +15,11 @@
             
             $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
                 vm.currentMenuName = toState.menu;
+            });
+
+            $rootScope.$on('$viewContentLoading', function (event, viewConfig) {
+                $rootScope.alert = {};
+                $rootScope.hideProgressToast();;
             });
 
             $rootScope.toggleLeft = function () {

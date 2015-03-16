@@ -11,10 +11,12 @@
             abp.ui.setBusy(
                 null,
                 adminService.getAdminMenus({
+                    userId: undefined,
+                    menuId: undefined,
                     roleIds: $rootScope.currentUser.roleIds
                 }).success(function (data) {
-                    vm.adminMenu = data.menus;
-                    vm.adminCats = data.categoryList;
+                    vm.adminMenu = data.id.menus;
+                    vm.adminCats = data.id.categoryList;
                 })
             );
         }

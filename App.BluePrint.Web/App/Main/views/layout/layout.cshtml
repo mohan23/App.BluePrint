@@ -42,6 +42,8 @@
 
 
     @Scripts.Render("~/Bundles/App/Main/js")
+    @Scripts.Render("~/Bundles/App/Common/js")
+    @Scripts.Render("~/Bundles/App/Views/js")
     <!--[if lt IE 8]>
         <script src="@Url.Content("~/Content/iconset/IE7/IE7.js")"></script>
     <![endif]-->
@@ -51,7 +53,7 @@
     <div ng-app="app">
         <div ng-controller="app.views.layout as vm">
             <div ng-include="'/App/Main/views/layout/header.cshtml'"></div>
-            <div ng-controller="alertController" class="container" id="alertContainer">
+            <div ng-controller="alertController" class="container-fluid" id="alertContainer">
                 <alert-message></alert-message>
             </div>
             <div class="container-fluid">

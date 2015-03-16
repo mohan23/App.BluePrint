@@ -52,12 +52,7 @@ namespace App.BluePrint.Web
                     .IncludeDirectory("~/App/Main", "*.css", true)
                 );
 
-
-            #region Bundles for Angular application (private pages, entered after login)
-
-
-
-
+            
             //~/Bundles/App/vendor/js
             bundles.Add(
                 new ScriptBundle("~/Bundles/App/vendor/js")
@@ -78,7 +73,7 @@ namespace App.BluePrint.Web
                         "~/Scripts/others/spinjs/spin.js",
                         "~/Scripts/others/spinjs/jquery.spin.js",
 
-                         "~/Scripts/angular.min.js",
+                        "~/Scripts/angular.min.js",
                         "~/Scripts/angular-animate.min.js",
                         "~/Scripts/angular-sanitize.min.js",
                         "~/Scripts/angular-ui-router.min.js",
@@ -107,18 +102,25 @@ namespace App.BluePrint.Web
 
            
 
-            //~/Bundles/App/Main/js
-            bundles.Add(
-                new ScriptBundle("~/Bundles/App/Main/js")
-                    .IncludeDirectory("~/App/Main", "*.js", true)
-                );
-            #endregion
+            ////~/Bundles/App/Main/js
+            //bundles.Add(new ScriptBundle("~/Bundles/App/Main/js").IncludeDirectory("~/App/Main", "*.js", true));
+            //#endregion
 
-            //~/Bundles/js
-            bundles.Add(
-                new ScriptBundle("~/Bundles/js")
-                    .Include("~/app/common/main-{version}.js")
-                );
+            ////~/Bundles/js
+            //bundles.Add(new ScriptBundle("~/Bundles/Main/js").Include("~/app/common/main-{version}.js"));
+
+            #region -- Application Js Files JS --
+
+            //Include AppJs
+            bundles.Add(new ScriptBundle("~/Bundles/App/Main/js").Include("~/App/Main/App-{version}.js"));
+
+            //Include App
+            bundles.Add(new ScriptBundle("~/Bundles/App/Common/js").IncludeDirectory("~/App/Common/js", "*.js", true));
+
+            //include view js file
+            bundles.Add(new ScriptBundle("~/Bundles/App/Views/js").IncludeDirectory("~/App/Main/Views", "*.js", true));
+
+            #endregion
         }
     }
 }

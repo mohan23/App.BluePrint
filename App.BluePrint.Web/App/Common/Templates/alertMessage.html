@@ -1,9 +1,10 @@
 ﻿<div ng-show="alert.type != undefined" class="alert alert-{{alert.type}}">
     <div class="container-fluid">
-        <div class="col-sm-1"><i class="icon-error-bp" ng-show="alert.type == 'danger'"/>
+        <div class="col-sm-11">
+            <i class="icon-error-bp" ng-show="alert.type == 'danger'" />
             <i class="icon-warning2-bp" ng-show="alert.type == 'warn'" />
             <i class="icon-info3-bp" ng-show="alert.type == 'info'" />
+            <span>{{alert.message}}</span>
         </div>
-        <div class="col-sm-10">{{alert.message}}</div>
     </div>
 </div>

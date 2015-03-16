@@ -245,10 +245,12 @@
     <Content Include="App\Account\images\login1.jpg" />
     <Content Include="App\Account\images\login2.jpg" />
     <Content Include="App\Account\js\login.js" />
+    <Content Include="App\Common\js\app.abp.ui-1.0.0.4.js" />
+    <Content Include="App\Common\js\app.alerts-1.0.0.3.js" />
+    <Content Include="App\Common\js\app.directives-1.0.0.2.js" />
     <Content Include="App\Common\Templates\alertMessage.html" />
-    <Content Include="App\Common\main-1.0.2.js" />
     <Content Include="App\Common\Templates\progressToast.html" />
-    <Content Include="App\Main\app-1.0.0.21.js" />
+    <Content Include="App\Main\app-1.0.0.26.js" />
     <Content Include="App\Main\images\abp-logo.png" />
     <Content Include="App\Main\images\blueprint_footer_logo.jpg" />
     <Content Include="App\Main\images\blueprint_logo.png" />
@@ -262,7 +264,7 @@
     <Content Include="App\Main\views\layout\layout.js" />
     <Content Include="App\Main\views\home\home.js" />
     <Content Include="App\Main\views\search\about.js" />
-    <Content Include="App\Main\views\admin\index.js" />
+    <Content Include="App\Main\views\admin\adminstart.js" />
     <Content Include="Abp\Framework\styles\abp.less" />
     <Content Include="Abp\Framework\styles\abp.css.map" />
     <Content Include="App\Common\Templates\alertDismissable.html" />
@@ -377,7 +379,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <Content Include="App\Main\views\admin\index.cshtml" />
+    <Content Include="App\Main\views\admin\adminstart.cshtml" />
     <Content Include=".bowerrc" />
     <Content Include="fonts\blueprinticons.eot" />
     <Content Include="fonts\blueprinticons.ttf" />
@@ -1824,7 +1826,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties bower_1json__JSONSchema="http://json.schemastore.org/bower" Scripts_2lib_2angular-animate_2package_1json__JSONSchema="http://json.schemastore.org/package" />
+      <UserProperties Scripts_2lib_2angular-animate_2package_1json__JSONSchema="http://json.schemastore.org/package" bower_1json__JSONSchema="http://json.schemastore.org/bower" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
