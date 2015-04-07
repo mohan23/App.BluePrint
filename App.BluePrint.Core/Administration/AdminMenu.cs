@@ -12,7 +12,7 @@ using App.BluePrint.Authorization;
 
 namespace App.BluePrint.Administration
 {
-    [Table("MenuConfiguration", Schema = "Administration")]
+    [Table("Navigation", Schema = "Administration")]
     public class AdminMenu : FullAuditedEntity<int, UserManagement>
     {
         public virtual string MenuName { get; set; }
@@ -23,6 +23,7 @@ namespace App.BluePrint.Administration
         public virtual string ImageIconUrl { get; set; }
         public virtual string ImageIconClass { get; set; }
         public virtual bool IsAction { get; set; }
+        public virtual string RelativeUrl { get; set; }
         /// <summary>
         /// Role definitions for this user.
         /// </summary>

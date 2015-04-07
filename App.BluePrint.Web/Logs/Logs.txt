@@ -1,129 +1,277 @@
-DEBUG 2015-03-15 20:42:03,622 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2015-03-15 20:42:05,470 [1    ] Abp.Modules.AbpModuleManager             - Found 14 ABP modules in total.
-DEBUG 2015-03-15 20:42:05,470 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.5.7.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2015-03-15 20:42:05,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.5.7.1, Culture=neutral, PublicKeyToken=null
-DEBUG 2015-03-15 20:42:05,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.5.6.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2015-03-15 20:42:05,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.UserManagement.Framework.FrameworkCoreModule, Abp.UserManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2015-03-15 20:42:05,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.UserManagement.EntityFramework.AbpUserManagementEFModule, Abp.UserManagement.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2015-03-15 20:42:05,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.5.6.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2015-03-15 20:42:05,501 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.5.6.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2015-03-15 20:42:05,501 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.5.6.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2015-03-15 20:42:05,501 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.ApplicationModule, App.BluePrint.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2015-03-15 20:42:05,501 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.CoreModule, App.BluePrint.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2015-03-15 20:42:05,501 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.AppDataModule, App.BluePrint.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2015-03-15 20:42:05,501 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.Repository.BluePrintRepositoryModule, App.BluePrint.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2015-03-15 20:42:05,516 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.Web.BluePrintWebModule, App.BluePrint.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2015-03-15 20:42:05,516 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.BluePrintWebApiModule, App.BluePrint.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2015-03-15 20:42:05,516 [1    ] Abp.Modules.AbpModuleManager             - 14 modules loaded.
-DEBUG 2015-03-15 20:42:06,720 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes defines auto mapping attributes
-DEBUG 2015-03-15 20:42:06,720 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - App.BluePrint.UserService.Dto.UserEntity
-DEBUG 2015-03-15 20:42:08,313 [1    ] Default                                  - Dynamic web api controller is created for type 'App.BluePrint.UserService.IUserAppService' with service name 'app/user'.
-DEBUG 2015-03-15 20:42:08,329 [1    ] Default                                  - Dynamic web api controller is created for type 'App.BluePrint.Session.ISessionAppService' with service name 'app/session'.
-DEBUG 2015-03-15 20:42:08,329 [1    ] Default                                  - Dynamic web api controller is created for type 'App.BluePrint.Administration.IAdminAppService' with service name 'app/admin'.
-DEBUG 2015-03-15 20:42:09,845 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
-DEBUG 2015-03-15 20:42:09,860 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: App.BluePrint
-DEBUG 2015-03-15 20:42:09,876 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-ERROR 2015-03-15 20:42:24,188 [6    ] Default                                  - Abp.UI.UserFriendlyException: Your form is invalid!
-   at App.BluePrint.Web.Controllers.AccountController.Login(LoginViewModel loginModel, String returnUrl) in C:\Projects\App.BluePrint\App.BluePrint.Web\Controllers\AccountController.cs:line 73
-   at Castle.Proxies.AccountControllerProxy.Login_callback(LoginViewModel loginModel, String returnUrl)
-   at Castle.Proxies.Invocations.AccountController_Login.InvokeMethodOnTarget()
-   at Castle.DynamicProxy.AbstractInvocation.Proceed()
-   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options)
-   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
-   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
-   at Castle.DynamicProxy.AbstractInvocation.Proceed()
-   at Castle.Proxies.AccountControllerProxy.Login(LoginViewModel loginModel, String returnUrl)
-   at lambda_method(Closure , ControllerBase , Object[] )
-   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
-   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
-   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
-   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
-   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
-   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+DEBUG 2015-03-25 14:15:25,547 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-03-25 14:15:33,758 [1    ] Abp.Modules.AbpModuleManager             - Found 14 ABP modules in total.
+DEBUG 2015-03-25 14:15:33,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:15:33,810 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.5.8.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:15:33,821 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:15:33,872 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.UserManagement.Framework.FrameworkCoreModule, Abp.UserManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:15:33,887 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.UserManagement.EntityFramework.AbpUserManagementEFModule, Abp.UserManagement.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:15:33,903 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:15:33,903 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:15:33,930 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:15:33,945 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.ApplicationModule, App.BluePrint.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:15:33,956 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.CoreModule, App.BluePrint.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:15:33,968 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.AppDataModule, App.BluePrint.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:15:33,984 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.Repository.BluePrintRepositoryModule, App.BluePrint.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:15:34,002 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.Web.BluePrintWebModule, App.BluePrint.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:15:34,014 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.BluePrintWebApiModule, App.BluePrint.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:15:34,055 [1    ] Abp.Modules.AbpModuleManager             - 14 modules loaded.
+DEBUG 2015-03-25 14:15:42,076 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-03-25 14:15:42,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - App.BluePrint.Dto.AdminMenuDto
+DEBUG 2015-03-25 14:15:43,113 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - App.BluePrint.Dto.LookupDto
+DEBUG 2015-03-25 14:15:43,165 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - App.BluePrint.UserService.Dto.UserEntity
+DEBUG 2015-03-25 14:15:49,336 [1    ] Default                                  - Dynamic web api controller is created for type 'App.BluePrint.Administration.IAdminAppService' with service name 'app/admin'.
+DEBUG 2015-03-25 14:15:49,352 [1    ] Default                                  - Dynamic web api controller is created for type 'App.BluePrint.Session.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-03-25 14:15:49,446 [1    ] Default                                  - Dynamic web api controller is created for type 'App.BluePrint.UserService.IUserAppService' with service name 'app/user'.
+DEBUG 2015-03-25 14:15:53,308 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2015-03-25 14:15:53,339 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: App.BluePrint
+DEBUG 2015-03-25 14:15:53,355 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+ERROR 2015-03-25 14:21:46,217 [12   ] Default                                  - System.Web.HttpParseException (0x80004005): A space or line break was encountered after the "@" character.  Only valid identifiers, keywords, comments, "(" and "{" are valid at the start of a code block and they must occur immediately following "@" with no space in between.
+
+   at System.Web.WebPages.Razor.RazorBuildProvider.EnsureGeneratedCode()
+   at System.Web.WebPages.Razor.RazorBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
+   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
    at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
    at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
-Abp.UI.UserFriendlyException: Your form is invalid!
-   at App.BluePrint.Web.Controllers.AccountController.Login(LoginViewModel loginModel, String returnUrl) in C:\Projects\App.BluePrint\App.BluePrint.Web\Controllers\AccountController.cs:line 73
-   at Castle.Proxies.AccountControllerProxy.Login_callback(LoginViewModel loginModel, String returnUrl)
-   at Castle.Proxies.Invocations.AccountController_Login.InvokeMethodOnTarget()
-   at Castle.DynamicProxy.AbstractInvocation.Proceed()
-   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options)
-   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
-   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
-   at Castle.DynamicProxy.AbstractInvocation.Proceed()
-   at Castle.Proxies.AccountControllerProxy.Login(LoginViewModel loginModel, String returnUrl)
-   at lambda_method(Closure , ControllerBase , Object[] )
-   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
-   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
-   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
-   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
-   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
-   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+System.Web.HttpParseException (0x80004005): A space or line break was encountered after the "@" character.  Only valid identifiers, keywords, comments, "(" and "{" are valid at the start of a code block and they must occur immediately following "@" with no space in between.
+
+   at System.Web.WebPages.Razor.RazorBuildProvider.EnsureGeneratedCode()
+   at System.Web.WebPages.Razor.RazorBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
+   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
    at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
    at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
-ERROR 2015-03-15 20:42:32,610 [5    ] Default                                  - Abp.UI.UserFriendlyException: Your form is invalid!
-   at App.BluePrint.Web.Controllers.AccountController.Login(LoginViewModel loginModel, String returnUrl) in C:\Projects\App.BluePrint\App.BluePrint.Web\Controllers\AccountController.cs:line 73
-   at Castle.Proxies.AccountControllerProxy.Login_callback(LoginViewModel loginModel, String returnUrl)
-   at Castle.Proxies.Invocations.AccountController_Login.InvokeMethodOnTarget()
-   at Castle.DynamicProxy.AbstractInvocation.Proceed()
-   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options)
-   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
-   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
-   at Castle.DynamicProxy.AbstractInvocation.Proceed()
-   at Castle.Proxies.AccountControllerProxy.Login(LoginViewModel loginModel, String returnUrl)
-   at lambda_method(Closure , ControllerBase , Object[] )
-   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
-   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
-   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
-   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
-   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
-   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+INFO  2015-03-25 14:21:48,096 [42   ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> 1 
+INFO  2015-03-25 14:21:48,168 [42   ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> Tenency Name BASE 
+INFO  2015-03-25 14:21:48,181 [42   ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> User Name admin 
+INFO  2015-03-25 14:22:10,973 [48   ] BluePrint.Administration.AdminAppService - ---> GetAdminMenuData --> 1 
+INFO  2015-03-25 14:22:12,046 [48   ] BluePrint.Administration.AdminAppService - ---> Menu Count --> 13 
+INFO  2015-03-25 14:22:12,064 [48   ] BluePrint.Administration.AdminAppService - ---> CatagoryListCount --> 5 
+INFO  2015-03-25 14:22:12,095 [48   ] BluePrint.Administration.AdminAppService - ---> ReturntAdminMenuData --> SUCCESS 
+INFO  2015-03-25 14:22:29,539 [12   ] BluePrint.Administration.AdminAppService - ---> GetAdminMenuData --> 1 
+INFO  2015-03-25 14:22:29,579 [12   ] BluePrint.Administration.AdminAppService - ---> Menu Count --> 13 
+INFO  2015-03-25 14:22:29,594 [12   ] BluePrint.Administration.AdminAppService - ---> CatagoryListCount --> 5 
+INFO  2015-03-25 14:22:29,609 [12   ] BluePrint.Administration.AdminAppService - ---> ReturntAdminMenuData --> SUCCESS 
+ERROR 2015-03-25 14:23:10,536 [50   ] Default                                  - System.Web.HttpParseException (0x80004005): A space or line break was encountered after the "@" character.  Only valid identifiers, keywords, comments, "(" and "{" are valid at the start of a code block and they must occur immediately following "@" with no space in between.
+
+   at System.Web.WebPages.Razor.RazorBuildProvider.EnsureGeneratedCode()
+   at System.Web.WebPages.Razor.RazorBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
+   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
    at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
    at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
-Abp.UI.UserFriendlyException: Your form is invalid!
-   at App.BluePrint.Web.Controllers.AccountController.Login(LoginViewModel loginModel, String returnUrl) in C:\Projects\App.BluePrint\App.BluePrint.Web\Controllers\AccountController.cs:line 73
-   at Castle.Proxies.AccountControllerProxy.Login_callback(LoginViewModel loginModel, String returnUrl)
-   at Castle.Proxies.Invocations.AccountController_Login.InvokeMethodOnTarget()
-   at Castle.DynamicProxy.AbstractInvocation.Proceed()
-   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options)
-   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
-   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
-   at Castle.DynamicProxy.AbstractInvocation.Proceed()
-   at Castle.Proxies.AccountControllerProxy.Login(LoginViewModel loginModel, String returnUrl)
-   at lambda_method(Closure , ControllerBase , Object[] )
-   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
-   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
-   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
-   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
-   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
-   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+System.Web.HttpParseException (0x80004005): A space or line break was encountered after the "@" character.  Only valid identifiers, keywords, comments, "(" and "{" are valid at the start of a code block and they must occur immediately following "@" with no space in between.
+
+   at System.Web.WebPages.Razor.RazorBuildProvider.EnsureGeneratedCode()
+   at System.Web.WebPages.Razor.RazorBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
+   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
    at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
    at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+INFO  2015-03-25 14:23:12,109 [51   ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> 1 
+INFO  2015-03-25 14:23:12,133 [51   ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> Tenency Name BASE 
+INFO  2015-03-25 14:23:12,147 [51   ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> User Name admin 
+INFO  2015-03-25 14:29:57,336 [93   ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> 1 
+INFO  2015-03-25 14:29:57,407 [93   ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> Tenency Name BASE 
+INFO  2015-03-25 14:29:57,437 [93   ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> User Name admin 
+INFO  2015-03-25 14:30:08,613 [102  ] BluePrint.Administration.AdminAppService - ---> GetAdminMenuData --> 1 
+INFO  2015-03-25 14:30:08,661 [102  ] BluePrint.Administration.AdminAppService - ---> Menu Count --> 13 
+INFO  2015-03-25 14:30:08,676 [102  ] BluePrint.Administration.AdminAppService - ---> CatagoryListCount --> 5 
+INFO  2015-03-25 14:30:08,688 [102  ] BluePrint.Administration.AdminAppService - ---> ReturntAdminMenuData --> SUCCESS 
+INFO  2015-03-25 14:34:07,592 [126  ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> 1 
+INFO  2015-03-25 14:34:07,716 [126  ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> Tenency Name BASE 
+INFO  2015-03-25 14:34:07,730 [126  ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> User Name admin 
+INFO  2015-03-25 14:34:15,175 [143  ] BluePrint.Administration.AdminAppService - ---> GetAdminMenuData --> 1 
+INFO  2015-03-25 14:34:15,204 [143  ] BluePrint.Administration.AdminAppService - ---> Menu Count --> 13 
+INFO  2015-03-25 14:34:15,215 [143  ] BluePrint.Administration.AdminAppService - ---> CatagoryListCount --> 5 
+INFO  2015-03-25 14:34:15,225 [143  ] BluePrint.Administration.AdminAppService - ---> ReturntAdminMenuData --> SUCCESS 
+INFO  2015-03-25 14:35:45,561 [124  ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> 1 
+INFO  2015-03-25 14:35:45,623 [124  ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> Tenency Name BASE 
+INFO  2015-03-25 14:35:45,641 [124  ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> User Name admin 
+INFO  2015-03-25 14:35:48,655 [118  ] BluePrint.Administration.AdminAppService - ---> GetAdminMenuData --> 1 
+INFO  2015-03-25 14:35:48,758 [118  ] BluePrint.Administration.AdminAppService - ---> Menu Count --> 13 
+INFO  2015-03-25 14:35:48,785 [118  ] BluePrint.Administration.AdminAppService - ---> CatagoryListCount --> 5 
+INFO  2015-03-25 14:35:48,850 [118  ] BluePrint.Administration.AdminAppService - ---> ReturntAdminMenuData --> SUCCESS 
+INFO  2015-03-25 14:36:51,221 [103  ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> 1 
+INFO  2015-03-25 14:36:51,247 [103  ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> Tenency Name BASE 
+INFO  2015-03-25 14:36:51,266 [103  ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> User Name admin 
+INFO  2015-03-25 14:36:53,823 [111  ] BluePrint.Administration.AdminAppService - ---> GetAdminMenuData --> 1 
+INFO  2015-03-25 14:36:53,857 [111  ] BluePrint.Administration.AdminAppService - ---> Menu Count --> 13 
+INFO  2015-03-25 14:36:53,868 [111  ] BluePrint.Administration.AdminAppService - ---> CatagoryListCount --> 5 
+INFO  2015-03-25 14:36:53,878 [111  ] BluePrint.Administration.AdminAppService - ---> ReturntAdminMenuData --> SUCCESS 
+INFO  2015-03-25 14:37:46,853 [101  ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> 1 
+INFO  2015-03-25 14:37:46,952 [101  ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> Tenency Name BASE 
+INFO  2015-03-25 14:37:46,966 [101  ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> User Name admin 
+INFO  2015-03-25 14:37:49,517 [132  ] BluePrint.Administration.AdminAppService - ---> GetAdminMenuData --> 1 
+INFO  2015-03-25 14:37:49,557 [132  ] BluePrint.Administration.AdminAppService - ---> Menu Count --> 13 
+INFO  2015-03-25 14:37:49,573 [132  ] BluePrint.Administration.AdminAppService - ---> CatagoryListCount --> 5 
+INFO  2015-03-25 14:37:49,587 [132  ] BluePrint.Administration.AdminAppService - ---> ReturntAdminMenuData --> SUCCESS 
+INFO  2015-03-25 14:38:16,823 [132  ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> 1 
+INFO  2015-03-25 14:38:16,853 [132  ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> Tenency Name BASE 
+INFO  2015-03-25 14:38:16,869 [132  ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> User Name admin 
+INFO  2015-03-25 14:38:19,589 [108  ] BluePrint.Administration.AdminAppService - ---> GetAdminMenuData --> 1 
+INFO  2015-03-25 14:38:19,631 [108  ] BluePrint.Administration.AdminAppService - ---> Menu Count --> 13 
+INFO  2015-03-25 14:38:19,651 [108  ] BluePrint.Administration.AdminAppService - ---> CatagoryListCount --> 5 
+INFO  2015-03-25 14:38:19,665 [108  ] BluePrint.Administration.AdminAppService - ---> ReturntAdminMenuData --> SUCCESS 
+DEBUG 2015-03-25 14:41:13,597 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-03-25 14:41:24,010 [1    ] Abp.Modules.AbpModuleManager             - Found 14 ABP modules in total.
+DEBUG 2015-03-25 14:41:24,051 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:41:24,080 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.5.8.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:41:24,099 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:41:24,115 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.UserManagement.Framework.FrameworkCoreModule, Abp.UserManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:41:24,134 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.UserManagement.EntityFramework.AbpUserManagementEFModule, Abp.UserManagement.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:41:24,150 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:41:24,167 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:41:24,183 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:41:24,198 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.ApplicationModule, App.BluePrint.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:41:24,217 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.CoreModule, App.BluePrint.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:41:24,232 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.AppDataModule, App.BluePrint.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:41:24,249 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.Repository.BluePrintRepositoryModule, App.BluePrint.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:41:24,264 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.Web.BluePrintWebModule, App.BluePrint.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:41:24,281 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.BluePrintWebApiModule, App.BluePrint.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 14:41:24,322 [1    ] Abp.Modules.AbpModuleManager             - 14 modules loaded.
+DEBUG 2015-03-25 14:41:31,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-03-25 14:41:31,750 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - App.BluePrint.Dto.AdminMenuDto
+DEBUG 2015-03-25 14:41:32,656 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - App.BluePrint.Dto.LookupDto
+DEBUG 2015-03-25 14:41:32,711 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - App.BluePrint.UserService.Dto.UserEntity
+DEBUG 2015-03-25 14:41:40,300 [1    ] Default                                  - Dynamic web api controller is created for type 'App.BluePrint.Administration.IAdminAppService' with service name 'app/admin'.
+DEBUG 2015-03-25 14:41:40,331 [1    ] Default                                  - Dynamic web api controller is created for type 'App.BluePrint.Session.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-03-25 14:41:40,360 [1    ] Default                                  - Dynamic web api controller is created for type 'App.BluePrint.UserService.IUserAppService' with service name 'app/user'.
+DEBUG 2015-03-25 14:41:44,968 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2015-03-25 14:41:45,023 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: App.BluePrint
+DEBUG 2015-03-25 14:41:45,040 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+INFO  2015-03-25 14:43:08,537 [9    ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> 1 
+INFO  2015-03-25 14:43:08,626 [9    ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> Tenency Name BASE 
+INFO  2015-03-25 14:43:08,642 [9    ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> User Name admin 
+INFO  2015-03-25 14:43:21,597 [8    ] BluePrint.Administration.AdminAppService - ---> GetAdminMenuData --> 1 
+INFO  2015-03-25 14:43:22,763 [8    ] BluePrint.Administration.AdminAppService - ---> Menu Count --> 13 
+INFO  2015-03-25 14:43:22,797 [8    ] BluePrint.Administration.AdminAppService - ---> CatagoryListCount --> 5 
+INFO  2015-03-25 14:43:22,858 [8    ] BluePrint.Administration.AdminAppService - ---> ReturntAdminMenuData --> SUCCESS 
+DEBUG 2015-03-25 15:21:17,379 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-03-25 15:21:26,098 [1    ] Abp.Modules.AbpModuleManager             - Found 14 ABP modules in total.
+DEBUG 2015-03-25 15:21:26,132 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:21:26,154 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.5.8.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:21:26,167 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:21:26,182 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.UserManagement.Framework.FrameworkCoreModule, Abp.UserManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:21:26,197 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.UserManagement.EntityFramework.AbpUserManagementEFModule, Abp.UserManagement.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:21:26,211 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:21:26,227 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:21:26,242 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:21:26,255 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.ApplicationModule, App.BluePrint.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:21:26,273 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.CoreModule, App.BluePrint.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:21:26,285 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.AppDataModule, App.BluePrint.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:21:26,291 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.Repository.BluePrintRepositoryModule, App.BluePrint.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:21:26,291 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.Web.BluePrintWebModule, App.BluePrint.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:21:26,307 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.BluePrintWebApiModule, App.BluePrint.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:21:26,338 [1    ] Abp.Modules.AbpModuleManager             - 14 modules loaded.
+DEBUG 2015-03-25 15:21:32,663 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-03-25 15:21:32,673 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - App.BluePrint.Dto.AdminMenuDto
+DEBUG 2015-03-25 15:21:33,002 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - App.BluePrint.Dto.LookupDto
+DEBUG 2015-03-25 15:21:33,039 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - App.BluePrint.UserService.Dto.UserEntity
+DEBUG 2015-03-25 15:21:38,811 [1    ] Default                                  - Dynamic web api controller is created for type 'App.BluePrint.Administration.IAdminAppService' with service name 'app/admin'.
+DEBUG 2015-03-25 15:21:38,832 [1    ] Default                                  - Dynamic web api controller is created for type 'App.BluePrint.Session.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-03-25 15:21:38,853 [1    ] Default                                  - Dynamic web api controller is created for type 'App.BluePrint.UserService.IUserAppService' with service name 'app/user'.
+DEBUG 2015-03-25 15:21:39,514 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2015-03-25 15:21:39,545 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: App.BluePrint
+DEBUG 2015-03-25 15:21:39,560 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+INFO  2015-03-25 15:22:39,265 [96   ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> 1 
+INFO  2015-03-25 15:22:39,336 [96   ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> Tenency Name BASE 
+INFO  2015-03-25 15:22:39,350 [96   ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> User Name admin 
+INFO  2015-03-25 15:22:49,801 [5    ] BluePrint.Administration.AdminAppService - ---> GetAdminMenuData --> 1 
+INFO  2015-03-25 15:22:50,871 [5    ] BluePrint.Administration.AdminAppService - ---> Menu Count --> 13 
+INFO  2015-03-25 15:22:50,945 [5    ] BluePrint.Administration.AdminAppService - ---> CatagoryListCount --> 5 
+INFO  2015-03-25 15:22:50,974 [5    ] BluePrint.Administration.AdminAppService - ---> ReturntAdminMenuData --> SUCCESS 
+INFO  2015-03-25 15:26:26,024 [80   ] BluePrint.Administration.AdminAppService - ---> GetAdminMenuData --> 1 
+INFO  2015-03-25 15:26:26,069 [80   ] BluePrint.Administration.AdminAppService - ---> Menu Count --> 13 
+INFO  2015-03-25 15:26:26,085 [80   ] BluePrint.Administration.AdminAppService - ---> CatagoryListCount --> 5 
+INFO  2015-03-25 15:26:26,097 [80   ] BluePrint.Administration.AdminAppService - ---> ReturntAdminMenuData --> SUCCESS 
+DEBUG 2015-03-25 15:33:10,617 [77   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-03-25 15:33:18,596 [77   ] Abp.Modules.AbpModuleManager             - Found 14 ABP modules in total.
+DEBUG 2015-03-25 15:33:18,633 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:33:18,652 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.5.8.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:33:18,666 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:33:18,677 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.UserManagement.Framework.FrameworkCoreModule, Abp.UserManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:33:18,690 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.UserManagement.EntityFramework.AbpUserManagementEFModule, Abp.UserManagement.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:33:18,703 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:33:18,707 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:33:18,723 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.5.8.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:33:18,738 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.ApplicationModule, App.BluePrint.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:33:18,738 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.CoreModule, App.BluePrint.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:33:18,754 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.AppDataModule, App.BluePrint.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:33:18,770 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.Repository.BluePrintRepositoryModule, App.BluePrint.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:33:18,785 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.Web.BluePrintWebModule, App.BluePrint.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:33:18,785 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: App.BluePrint.BluePrintWebApiModule, App.BluePrint.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-03-25 15:33:18,816 [77   ] Abp.Modules.AbpModuleManager             - 14 modules loaded.
+DEBUG 2015-03-25 15:33:24,408 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-03-25 15:33:24,423 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - App.BluePrint.Dto.AdminMenuDto
+DEBUG 2015-03-25 15:33:24,720 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - App.BluePrint.Dto.LookupDto
+DEBUG 2015-03-25 15:33:24,767 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - App.BluePrint.UserService.Dto.UserEntity
+DEBUG 2015-03-25 15:33:30,267 [77   ] Default                                  - Dynamic web api controller is created for type 'App.BluePrint.Administration.IAdminAppService' with service name 'app/admin'.
+DEBUG 2015-03-25 15:33:30,282 [77   ] Default                                  - Dynamic web api controller is created for type 'App.BluePrint.Session.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-03-25 15:33:30,298 [77   ] Default                                  - Dynamic web api controller is created for type 'App.BluePrint.UserService.IUserAppService' with service name 'app/user'.
+DEBUG 2015-03-25 15:33:30,903 [77   ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2015-03-25 15:33:30,949 [77   ] Abp.Localization.LocalizationManager     - Initialized localization source: App.BluePrint
+DEBUG 2015-03-25 15:33:30,949 [77   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+INFO  2015-03-25 15:33:51,858 [83   ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> 1 
+INFO  2015-03-25 15:34:06,349 [83   ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> Tenency Name BASE 
+INFO  2015-03-25 15:34:06,364 [83   ] App.BluePrint.Session.SessionAppService  - ---> GetSessionData --> User Name admin 
+INFO  2015-03-25 15:34:38,258 [71   ] BluePrint.Administration.AdminAppService - ---> GetAdminMenuData --> 1 
+INFO  2015-03-25 15:34:39,055 [71   ] BluePrint.Administration.AdminAppService - ---> Menu Count --> 13 
+INFO  2015-03-25 15:34:39,071 [71   ] BluePrint.Administration.AdminAppService - ---> CatagoryListCount --> 5 
+INFO  2015-03-25 15:34:39,087 [71   ] BluePrint.Administration.AdminAppService - ---> ReturntAdminMenuData --> SUCCESS 

@@ -2,6 +2,8 @@
 using Abp.UserManagement.EntityFramework;
 using App.BluePrint.Administration;
 using App.BluePrint.Authorization;
+using App.BluePrint.Config;
+using App.BluePrint.Metadata;
 using App.BluePrint.MultiTenency;
 using App.BluePrint.Users;
 using System.Data.Entity;
@@ -24,6 +26,16 @@ namespace App.BluePrint.EntityFramework
         public virtual IDbSet<AdminMenu> AdministrationMenus { get; set; }
         public virtual IDbSet<AdminMenuRoleMapper> AdminMenuRoles { get; set; }
         public virtual IDbSet<Lookup> LookupData { get; set; }
+
+        #region -- Metadata Definitions --
+
+        public virtual IDbSet<VersionGenerator> Versioning { get; set; }
+        public virtual IDbSet<ExProperties> ExProperties { get; set; }
+        public virtual IDbSet<MetadataDefinition> MetadataDefinition { get; set; }
+        public virtual IDbSet<MetadataVersion> MetadataVersion { get; set; }
+
+        #endregion
+
         public AppDbContext()
             : base("Default")
         {
@@ -38,6 +50,58 @@ namespace App.BluePrint.EntityFramework
             : base(nameOrConnectionString)
         {
 
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            //modelBuilder.Entity<MetadataGroup>()
+            //    .HasMany<MetadataSection>().WithRequired(s => s.GroupId).WillCascadeOnDelete(false)
+
+            modelBuilder.Entity<UserManagement>()
+                .HasMany<ManagerDefinition>(u => u.Managers)
+                .WithOptional(m => m.UserInfo).HasForeignKey(m => m.UserId).WillCascadeOnDelete(true);
+
+            modelBuilder.Entity<ManagerDefinition>()
+                .HasRequired(m => m.ManagerInfo)
+                .WithMany().HasForeignKey(m => m.ManagerId).WillCascadeOnDelete(false);
+
+            #region -- Metadata Definitions --
+
+            modelBuilder.Entity<MetadataDefinition>()
+                .HasMany<MetadataVersion>(m => m.Versions)
+                .WithRequired(v => v.Definition).HasForeignKey(v => v.MetadataId).WillCascadeOnDelete(true);
+
+            modelBuilder.Entity<VersionGenerator>()
+                .HasRequired<MetadataVersion>(m => m.MetadataVersionInfo)
+                .WithRequiredPrincipal(v => v.Version).WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<MetadataVersion>()
+                .HasMany<ExtendedProperties>(m => m.ExtendedProperties)
+                .WithOptional(x => x.MetadataVersionInfo).HasForeignKey(m => m.MetadataVersionId).WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<ExProperties>()
+                .HasOptional<ExtendedProperties>(x => x.PropertyInfo)
+                .WithOptionalPrincipal(e => e.Properties).WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<MetadataVersion>()
+                .HasMany<MetadataGroup>(m => m.MetadataGroups)
+                .WithRequired(g => g.MetadataVersionInfo).HasForeignKey(m => m.MetadataVersionId).WillCascadeOnDelete(true);
+
+            modelBuilder.Entity<MetadataGroup>()
+                .HasMany<ExtendedProperties>(m => m.ExtendedProperties)
+                .WithOptional(x => x.MetadataGroupInfo).HasForeignKey(m => m.MetadataGroupId).WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<MetadataGroup>()
+                .HasMany<MetadataSection>(g => g.Sections)
+                .WithRequired(s => s.MetadataGroupInfo).HasForeignKey(s => s.MetadataGroupId).WillCascadeOnDelete(true);
+
+            modelBuilder.Entity<MetadataSection>()
+               .HasMany<ExtendedProperties>(m => m.ExtendedProperties)
+               .WithOptional(x => x.MetadataSectionInfo).HasForeignKey(m => m.MetadataSectionId).WillCascadeOnDelete(false);
+
+            #endregion
         }
     }
 }

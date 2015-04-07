@@ -18,7 +18,7 @@ namespace App.BluePrint.Migrations.Data
             var defaultTenant = context.Tenants.FirstOrDefault(t => t.TenancyName == "BASE");
             var adminUser = context.Users.FirstOrDefault(u => u.TenantId == defaultTenant.Id && u.UserName == "admin");
 
-            ClearAdminData(context, adminUser);
+            //ClearAdminData(context, adminUser);
             CreateLookupData(context, adminUser);
             CreateUserMenus(context, adminUser, defaultTenant);
             CreateProcessMenus(context, adminUser, defaultTenant);
@@ -26,6 +26,7 @@ namespace App.BluePrint.Migrations.Data
             CreateDesignerMenus(context, adminUser, defaultTenant);
             CreateReportsMenus(context, adminUser, defaultTenant);
             CreateAdminActions(context, adminUser, defaultTenant);
+            UpdateNavigationPath(context, adminUser, defaultTenant);
         }
 
         private void ClearAdminData(AppDbContext context, UserManagement user)
@@ -126,55 +127,62 @@ namespace App.BluePrint.Migrations.Data
                     context.SaveChanges();
                 }
 
-                context.AdministrationMenus.Add(new AdminMenu()
+                var userMenu = context.AdministrationMenus.FirstOrDefault(m => m.LookupId == UserCat.Id);
+                if (userMenu == null)
                 {
-                    Category = UserCat,
-                    CreatorUserId = user.Id,
-                    MenuName = "ManageUsers",
-                    DisplayName = "Manage Application Users",
-                    Description = "Use this links to manage the application users",
-                    LookupId = UserCat.Id,
-                    SortOrder = 1,
-                    ImageIconClass = "icon-account-box-bp",
-                    LinkUrl = "/Admin/ManageUsers"
-                });
-
-                context.AdministrationMenus.Add(new AdminMenu()
-                {
-                    Category = UserCat,
-                    CreatorUser = user,
-                    MenuName = "ManageRoles",
-                    DisplayName = "Manage Application User Roles",
-                    Description = "Use this links to manage the application user roles",
-                    LookupId = UserCat.Id,
-                    SortOrder = 1,
-                    ImageIconClass = "icon-perm-identity-bp",
-                    LinkUrl = "/Admin/ManageRoles"
-                });
-
-                context.AdministrationMenus.Add(new AdminMenu()
-                {
-                    Category = UserCat,
-                    CreatorUser = user,
-                    MenuName = "ManageWFRoles",
-                    DisplayName = "Manage Workflpw Roles",
-                    Description = "Use this links to manage the workflow roles",
-                    LookupId = UserCat.Id,
-                    SortOrder = 1,
-                    ImageIconClass = "icon-perm-data-setting-bp",
-                    LinkUrl = "/Admin/ManageRoles"
-                });
-
-                context.SaveChanges();
-
-                var menus = context.AdministrationMenus.Where(m => m.LookupId == UserCat.Id);
-                if (menus != null)
-                {
-                    menus.ToList().ForEach(m =>
+                    context.AdministrationMenus.Add(new AdminMenu()
                     {
-                        context.AdminMenuRoles.Add(new AdminMenuRoleMapper(m.Id, adminRole.Id));
+                        Category = UserCat,
+                        CreatorUserId = user.Id,
+                        MenuName = "ManageUsers",
+                        DisplayName = "Manage Application Users",
+                        Description = "Use this links to manage the application users",
+                        LookupId = UserCat.Id,
+                        SortOrder = 1,
+                        ImageIconClass = "icon-account-box-bp",
+                        LinkUrl = "/Admin/ManageUsers",
+                        RelativeUrl = "/App/Main/Views/Admin/ManageUsers/ManageUsers.cshtml"
                     });
+
+                    context.AdministrationMenus.Add(new AdminMenu()
+                    {
+                        Category = UserCat,
+                        CreatorUser = user,
+                        MenuName = "ManageRoles",
+                        DisplayName = "Manage Application User Roles",
+                        Description = "Use this links to manage the application user roles",
+                        LookupId = UserCat.Id,
+                        SortOrder = 1,
+                        ImageIconClass = "icon-perm-identity-bp",
+                        LinkUrl = "/Admin/ManageRoles",
+                        RelativeUrl = "/App/Main/Views/Admin/ManageUsers/ManageRoles.cshtml"
+                    });
+
+                    context.AdministrationMenus.Add(new AdminMenu()
+                    {
+                        Category = UserCat,
+                        CreatorUser = user,
+                        MenuName = "ManageWFRoles",
+                        DisplayName = "Manage Workflpw Roles",
+                        Description = "Use this links to manage the workflow roles",
+                        LookupId = UserCat.Id,
+                        SortOrder = 1,
+                        ImageIconClass = "icon-perm-data-setting-bp",
+                        LinkUrl = "/Admin/ManageWFRoles",
+                        RelativeUrl = "/App/Main/Views/Admin/ManageUsers/ManageWFRoles.cshtml"
+                    });
+
                     context.SaveChanges();
+
+                    var menus = context.AdministrationMenus.Where(m => m.LookupId == UserCat.Id);
+                    if (menus != null)
+                    {
+                        menus.ToList().ForEach(m =>
+                        {
+                            context.AdminMenuRoles.Add(new AdminMenuRoleMapper(m.Id, adminRole.Id));
+                        });
+                        context.SaveChanges();
+                    }
                 }
             }
         }
@@ -192,42 +200,49 @@ namespace App.BluePrint.Migrations.Data
                     context.SaveChanges();
                 }
 
-                context.AdministrationMenus.Add(new AdminMenu()
+                var userMenu = context.AdministrationMenus.FirstOrDefault(m => m.LookupId == UserCat.Id);
+                if (userMenu == null)
                 {
-                    Category = UserCat,
-                    CreatorUserId = user.Id,
-                    MenuName = "ManageProcess",
-                    DisplayName = "Manage Process",
-                    Description = "Use this links to manage the Saved/Submitted Process",
-                    LookupId = UserCat.Id,
-                    SortOrder = 1,
-                    ImageIconClass = "icon-group-work-bp",
-                    LinkUrl = "/Admin/ManageProcess"
-                });
 
-                context.AdministrationMenus.Add(new AdminMenu()
-                {
-                    Category = UserCat,
-                    CreatorUser = user,
-                    MenuName = "ManageInstances",
-                    DisplayName = "Manage Process Instances",
-                    Description = "Use this links to manage the Saved/Submitted Process Instances",
-                    LookupId = UserCat.Id,
-                    SortOrder = 1,
-                    ImageIconClass = "icon-aspect-ratio-bp",
-                    LinkUrl = "/Admin/ManageInstances"
-                });
-                
-                context.SaveChanges();
-
-                var menus = context.AdministrationMenus.Where(m => m.LookupId == UserCat.Id);
-                if (menus != null)
-                {
-                    menus.ToList().ForEach(m =>
+                    context.AdministrationMenus.Add(new AdminMenu()
                     {
-                        context.AdminMenuRoles.Add(new AdminMenuRoleMapper(m.Id, adminRole.Id));
+                        Category = UserCat,
+                        CreatorUserId = user.Id,
+                        MenuName = "ManageProcess",
+                        DisplayName = "Manage Process",
+                        Description = "Use this links to manage the Saved/Submitted Process",
+                        LookupId = UserCat.Id,
+                        SortOrder = 1,
+                        ImageIconClass = "icon-group-work-bp",
+                        LinkUrl = "/Admin/ManageProcess",
+                        RelativeUrl = "/App/Main/Views/Admin/ManageProcess/ManageProcess.cshtml"
                     });
+
+                    context.AdministrationMenus.Add(new AdminMenu()
+                    {
+                        Category = UserCat,
+                        CreatorUser = user,
+                        MenuName = "ManageInstances",
+                        DisplayName = "Manage Process Instances",
+                        Description = "Use this links to manage the Saved/Submitted Process Instances",
+                        LookupId = UserCat.Id,
+                        SortOrder = 1,
+                        ImageIconClass = "icon-aspect-ratio-bp",
+                        LinkUrl = "/Admin/ManageInstances",
+                        RelativeUrl = "/App/Main/Views/Admin/ManageInstances/ManageInstances.cshtml"
+                    });
+
                     context.SaveChanges();
+
+                    var menus = context.AdministrationMenus.Where(m => m.LookupId == UserCat.Id);
+                    if (menus != null)
+                    {
+                        menus.ToList().ForEach(m =>
+                        {
+                            context.AdminMenuRoles.Add(new AdminMenuRoleMapper(m.Id, adminRole.Id));
+                        });
+                        context.SaveChanges();
+                    }
                 }
             }
         }
@@ -245,42 +260,48 @@ namespace App.BluePrint.Migrations.Data
                     context.SaveChanges();
                 }
 
-                context.AdministrationMenus.Add(new AdminMenu()
+                var userMenu = context.AdministrationMenus.FirstOrDefault(m => m.LookupId == UserCat.Id);
+                if (userMenu == null)
                 {
-                    Category = UserCat,
-                    CreatorUserId = user.Id,
-                    MenuName = "AdmSearch",
-                    DisplayName = "Search Process",
-                    Description = "Use this links to sarch the Saved/Submitted Process Instances",
-                    LookupId = UserCat.Id,
-                    SortOrder = 1,
-                    ImageIconClass = " icon-search2-bp",
-                    LinkUrl = "/Admin/SearchProcess"
-                });
-
-                context.AdministrationMenus.Add(new AdminMenu()
-                {
-                    Category = UserCat,
-                    CreatorUser = user,
-                    MenuName = "ManageInstances",
-                    DisplayName = "Manage Process Instances",
-                    Description = "Use this links to use the advance search for the Saved/Submitted Process Instances",
-                    LookupId = UserCat.Id,
-                    SortOrder = 1,
-                    ImageIconClass = "icon-search-plus-bp",
-                    LinkUrl = "/Admin/AdvSearch"
-                });
-
-                context.SaveChanges();
-
-                var menus = context.AdministrationMenus.Where(m => m.LookupId == UserCat.Id);
-                if (menus != null)
-                {
-                    menus.ToList().ForEach(m =>
+                    context.AdministrationMenus.Add(new AdminMenu()
                     {
-                        context.AdminMenuRoles.Add(new AdminMenuRoleMapper(m.Id, adminRole.Id));
+                        Category = UserCat,
+                        CreatorUserId = user.Id,
+                        MenuName = "AdmSearch",
+                        DisplayName = "Search Process",
+                        Description = "Use this links to sarch the Saved/Submitted Process Instances",
+                        LookupId = UserCat.Id,
+                        SortOrder = 1,
+                        ImageIconClass = " icon-search2-bp",
+                        LinkUrl = "/Admin/SearchProcess",
+                        RelativeUrl = "/App/Main/Views/Admin/SearchProcess/SearchProcess.cshtml"
                     });
+
+                    context.AdministrationMenus.Add(new AdminMenu()
+                    {
+                        Category = UserCat,
+                        CreatorUser = user,
+                        MenuName = "ManageInstances",
+                        DisplayName = "Manage Process Instances",
+                        Description = "Use this links to use the advance search for the Saved/Submitted Process Instances",
+                        LookupId = UserCat.Id,
+                        SortOrder = 1,
+                        ImageIconClass = "icon-search-plus-bp",
+                        LinkUrl = "/Admin/AdvSearch",
+                        RelativeUrl = "/App/Main/Views/Admin/AdvSearch/AdvSearch.cshtml"
+                    });
+
                     context.SaveChanges();
+
+                    var menus = context.AdministrationMenus.Where(m => m.LookupId == UserCat.Id);
+                    if (menus != null)
+                    {
+                        menus.ToList().ForEach(m =>
+                        {
+                            context.AdminMenuRoles.Add(new AdminMenuRoleMapper(m.Id, adminRole.Id));
+                        });
+                        context.SaveChanges();
+                    }
                 }
             }
         }
@@ -298,42 +319,48 @@ namespace App.BluePrint.Migrations.Data
                     context.SaveChanges();
                 }
 
-                context.AdministrationMenus.Add(new AdminMenu()
+                var userMenu = context.AdministrationMenus.FirstOrDefault(m => m.LookupId == UserCat.Id);
+                if (userMenu == null)
                 {
-                    Category = UserCat,
-                    CreatorUserId = user.Id,
-                    MenuName = "ProcessDesigners",
-                    DisplayName = "Design a New Process",
-                    Description = "Use this links to design a new Process/Form",
-                    LookupId = UserCat.Id,
-                    SortOrder = 1,
-                    ImageIconClass = " icon-dashboard-bp",
-                    LinkUrl = "/Admin/ProcessDesign"
-                });
-
-                context.AdministrationMenus.Add(new AdminMenu()
-                {
-                    Category = UserCat,
-                    CreatorUser = user,
-                    MenuName = "WFDesigners",
-                    DisplayName = "Design a new Workflow",
-                    Description = "Use this links to design a new Workflow",
-                    LookupId = UserCat.Id,
-                    SortOrder = 1,
-                    ImageIconClass = "icon-call-split-bp",
-                    LinkUrl = "/Admin/WFDesign"
-                });
-
-                context.SaveChanges();
-
-                var menus = context.AdministrationMenus.Where(m => m.LookupId == UserCat.Id);
-                if (menus != null)
-                {
-                    menus.ToList().ForEach(m =>
+                    context.AdministrationMenus.Add(new AdminMenu()
                     {
-                        context.AdminMenuRoles.Add(new AdminMenuRoleMapper(m.Id, adminRole.Id));
+                        Category = UserCat,
+                        CreatorUserId = user.Id,
+                        MenuName = "ProcessDesigners",
+                        DisplayName = "Design a New Process",
+                        Description = "Use this links to design a new Process/Form",
+                        LookupId = UserCat.Id,
+                        SortOrder = 1,
+                        ImageIconClass = " icon-dashboard-bp",
+                        LinkUrl = "/Admin/ProcessDesign",
+                        RelativeUrl = "/App/Main/Views/Admin/ProcessDesign/ProcessDesign.cshtml"
                     });
+
+                    context.AdministrationMenus.Add(new AdminMenu()
+                    {
+                        Category = UserCat,
+                        CreatorUser = user,
+                        MenuName = "WFDesigners",
+                        DisplayName = "Design a new Workflow",
+                        Description = "Use this links to design a new Workflow",
+                        LookupId = UserCat.Id,
+                        SortOrder = 1,
+                        ImageIconClass = "icon-call-split-bp",
+                        LinkUrl = "/Admin/WFDesign",
+                        RelativeUrl = "/App/Main/Views/Admin/WFDesign/WFDesign.cshtml"
+                    });
+
                     context.SaveChanges();
+
+                    var menus = context.AdministrationMenus.Where(m => m.LookupId == UserCat.Id);
+                    if (menus != null)
+                    {
+                        menus.ToList().ForEach(m =>
+                        {
+                            context.AdminMenuRoles.Add(new AdminMenuRoleMapper(m.Id, adminRole.Id));
+                        });
+                        context.SaveChanges();
+                    }
                 }
             }
         }
@@ -352,55 +379,59 @@ namespace App.BluePrint.Migrations.Data
                     context.SaveChanges();
                 }
 
-                context.AdministrationMenus.Add(new AdminMenu()
+                var userMenu = context.AdministrationMenus.FirstOrDefault(m => m.LookupId == UserCat.Id);
+                if (userMenu == null)
                 {
-                    Category = UserCat,
-                    CreatorUserId = user.Id,
-                    MenuName = "GenReport",
-                    DisplayName = "Generate Process Reports",
-                    Description = "Use this links to design a new Process/Form",
-                    LookupId = UserCat.Id,
-                    SortOrder = 1,
-                    ImageIconClass = " icon-assignment-bp",
-                    LinkUrl = "/Admin/Reports/ProcessRep"
-                });
-
-                context.AdministrationMenus.Add(new AdminMenu()
-                {
-                    Category = UserCat,
-                    CreatorUser = user,
-                    MenuName = "ReportDesign",
-                    DisplayName = "Design a new Report",
-                    Description = "Use this links to design a new Workflow",
-                    LookupId = UserCat.Id,
-                    SortOrder = 1,
-                    ImageIconClass = "icon-input-bp",
-                    LinkUrl = "/Admin/Reports/Design"
-                });
-
-                context.AdministrationMenus.Add(new AdminMenu()
-                {
-                    Category = UserCat,
-                    CreatorUser = user,
-                    MenuName = "RepAuditLog",
-                    DisplayName = "Generate Audit Log Report",
-                    Description = "Use this links to design a new Workflow",
-                    LookupId = UserCat.Id,
-                    SortOrder = 1,
-                    ImageIconClass = "icon-supervisor-account-bp",
-                    LinkUrl = "/Admin/Reports/AuditLog"
-                });
-
-                context.SaveChanges();
-
-                var menus = context.AdministrationMenus.Where(m => m.LookupId == UserCat.Id);
-                if (menus != null)
-                {
-                    menus.ToList().ForEach(m =>
+                    context.AdministrationMenus.Add(new AdminMenu()
                     {
-                        context.AdminMenuRoles.Add(new AdminMenuRoleMapper(m.Id, adminRole.Id));
+                        Category = UserCat,
+                        CreatorUserId = user.Id,
+                        MenuName = "GenReport",
+                        DisplayName = "Generate Process Reports",
+                        Description = "Use this links to design a new Process/Form",
+                        LookupId = UserCat.Id,
+                        SortOrder = 1,
+                        ImageIconClass = " icon-assignment-bp",
+                        LinkUrl = "/Admin/Reports/ProcessRep"
                     });
+
+                    context.AdministrationMenus.Add(new AdminMenu()
+                    {
+                        Category = UserCat,
+                        CreatorUser = user,
+                        MenuName = "ReportDesign",
+                        DisplayName = "Design a new Report",
+                        Description = "Use this links to design a new Workflow",
+                        LookupId = UserCat.Id,
+                        SortOrder = 1,
+                        ImageIconClass = "icon-input-bp",
+                        LinkUrl = "/Admin/Reports/Design"
+                    });
+
+                    context.AdministrationMenus.Add(new AdminMenu()
+                    {
+                        Category = UserCat,
+                        CreatorUser = user,
+                        MenuName = "RepAuditLog",
+                        DisplayName = "Generate Audit Log Report",
+                        Description = "Use this links to design a new Workflow",
+                        LookupId = UserCat.Id,
+                        SortOrder = 1,
+                        ImageIconClass = "icon-supervisor-account-bp",
+                        LinkUrl = "/Admin/Reports/AuditLog"
+                    });
+
                     context.SaveChanges();
+
+                    var menus = context.AdministrationMenus.Where(m => m.LookupId == UserCat.Id);
+                    if (menus != null)
+                    {
+                        menus.ToList().ForEach(m =>
+                        {
+                            context.AdminMenuRoles.Add(new AdminMenuRoleMapper(m.Id, adminRole.Id));
+                        });
+                        context.SaveChanges();
+                    }
                 }
             }
         }
@@ -414,28 +445,49 @@ namespace App.BluePrint.Migrations.Data
                 context.SaveChanges();
             }
 
-            context.AdministrationMenus.Add(new AdminMenu()
+            var userMenu = context.AdministrationMenus.FirstOrDefault(m => m.MenuName == "ActSettings");
+            if (userMenu == null)
             {
-                CreatorUserId = user.Id,
-                MenuName = "ActSettings",
-                DisplayName = "Settings",
-                Description = "To Manage BluePrint Settigns",
-                SortOrder = 1,
-                ImageIconClass = "icon-settings-applications-bp ",
-                LinkUrl = "/Admin/Settings",
-                IsAction = true
-            });
-            context.SaveChanges();
-
-            var menus = context.AdministrationMenus.Where(m => m.MenuName == "ActSettings");
-            if (menus != null)
-            {
-                menus.ToList().ForEach(m =>
+                context.AdministrationMenus.Add(new AdminMenu()
                 {
-                    context.AdminMenuRoles.Add(new AdminMenuRoleMapper(m.Id, adminRole.Id));
+                    CreatorUserId = user.Id,
+                    MenuName = "ActSettings",
+                    DisplayName = "Settings",
+                    Description = "To Manage BluePrint Settigns",
+                    SortOrder = 1,
+                    ImageIconClass = "icon-settings-applications-bp ",
+                    LinkUrl = "/Admin/Settings",
+                    IsAction = true
                 });
                 context.SaveChanges();
+
+                var menus = context.AdministrationMenus.Where(m => m.MenuName == "ActSettings");
+                if (menus != null)
+                {
+                    menus.ToList().ForEach(m =>
+                    {
+                        context.AdminMenuRoles.Add(new AdminMenuRoleMapper(m.Id, adminRole.Id));
+                    });
+                    context.SaveChanges();
+                }
             }
+        }
+
+        public void UpdateNavigationPath(AppDbContext context, UserManagement user, TenantManagement tenent)
+        {
+            var rootPath = "/App/Main/Views";
+            context.AdministrationMenus.ToList().ForEach(m =>
+            {
+                if (!m.IsAction)
+                {
+                    var linkName = m.LinkUrl.Replace("Admin", "").Replace("/", "") + ".cshtml";
+                    var relPath = rootPath + m.LinkUrl + "/" + linkName;
+                    m.LinkUrl = m.LinkUrl.Replace("/Admin", "");
+                    m.RelativeUrl = relPath;
+                }
+            });
+
+            context.SaveChanges();
         }
     }
 }

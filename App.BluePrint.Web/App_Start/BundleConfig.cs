@@ -40,6 +40,8 @@ namespace App.BluePrint.Web
                         "~/Scripts/lib/angular-material/angular-material.min.css",
                         "~/Scripts/lib/angular-material/themes/blue-grey-theme.css",
 
+                        "~/Scripts/lib/angular-ui-router-anim-in-out/css/anim-in-out.css",
+
                         "~/Content/toastr.min.css",
                         "~/Content/flags/famfamfam-flags.css",
                         "~/Content/font-awesome.min.css"
@@ -74,6 +76,7 @@ namespace App.BluePrint.Web
                         "~/Scripts/others/spinjs/jquery.spin.js",
 
                         "~/Scripts/angular.min.js",
+                        //"~/Scripts/angular-route.min.js",
                         "~/Scripts/angular-animate.min.js",
                         "~/Scripts/angular-sanitize.min.js",
                         "~/Scripts/angular-ui-router.min.js",
@@ -87,6 +90,7 @@ namespace App.BluePrint.Web
 
                         "~/Scripts/lib/angular-material/angular-material.min.js",
 
+                        "~/Scripts/lib/angular-ui-router-anim-in-out/anim-in-out.js",
                         "~/scripts/lib/arrive/minified/arrive.min.js",
                        
                         "~/Abp/Framework/scripts/abp.js",

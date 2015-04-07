@@ -11,7 +11,7 @@ namespace App.BluePrint.Administration
 {
     public interface IAdminAppService : IApplicationService
     {
-        MenuEntity GetAdminMenus(MenuRequestInput input);
+        ListResultOutput<AdminCategoryDto> GetAdminMenus(MenuRequestInput input);
         bool HasPermission(MenuRequestInput input);
     }
 }

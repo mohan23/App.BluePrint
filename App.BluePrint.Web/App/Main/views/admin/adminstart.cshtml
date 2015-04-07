@@ -1,26 +1,25 @@
-﻿<div ng-controller="app.views.admin.index as vm">
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-sm-3">
-
+﻿<div ui-view="adminvw" class="anim-in-out anim-slide-below-fade col-lg-12" data-anim-speed="500" ng-controller="app.views.admin.adminstart as vm">
+    <div class="col-lg-4" ng-repeat="cat in vm.menuData">
+        <div class="list-group">
+            <div class="list-group-item">
+                <div class="row-action-primary">
+                    <i class="{{cat.iconCss}}"></i>
                 </div>
-            </div>
-            <div class="list-group">
-                <div ng-repeat="user in vm.adminMenu">
-                    <div class="list-group-item">
-                        <div class="row-action-primary">
-                            <i class="mdi-social-person"></i>
-                        </div>
-                        <div class="row-content">
-                            <div class="least-content"></div>
-                            <h4 class="list-group-item-heading">{{user.displayName}}</h4>
-                            <p class="list-group-item-text">{{user.category}} <span class="text-muted">{{user.linkUrl}}</span></p>
+                <div class="row-content">
+                    <h5 class="list-group-item-heading">{{cat.value}}</h5>
+                    <div class="least-content"></div>
+                    <div class="list-group">
+                        <div ng-repeat="menu in cat.menus">
+                            <div class="list-group-item">
+                                <h4 class="list-group-item-text">
+                                    <a ui-sref="admin.{{menu.menuName}}"><i class="{{menu.imageIconClass}}" /> {{menu.displayName}}</a>
+                                </h4>
+                            </div>
                         </div>
                     </div>
-                    <div ng-if="!$last" class="list-group-separator"></div>
                 </div>
             </div>
+            <div class="list-group-separator"></div>
         </div>
     </div>
 </div>

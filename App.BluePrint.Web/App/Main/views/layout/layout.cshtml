@@ -19,7 +19,6 @@
     <!--[if lt IE 8]>
        @Styles.Render("~/Bundles/App/Vendor/IE7Css")
     <![endif]-->
-
     @Styles.Render("~/Bundles/App/Iconset/css")
     @Styles.Render("~/Bundles/App/BootStrapMaterial/css")
     <script type="text/javascript">
@@ -50,18 +49,13 @@
 
 </head>
 <body>
-    <div ng-app="app">
-        <div ng-controller="app.views.layout as vm">
-            <div ng-include="'/App/Main/views/layout/header.cshtml'"></div>
-            <div ng-controller="alertController" class="container-fluid" id="alertContainer">
-                <alert-message></alert-message>
-            </div>
-            <div class="container-fluid">
-                <div class="angular-animation-container row">
-                    <div ui-view class="shuffle-animation col-xs-12"></div>
-                </div>
-            </div>
+    <div layout="column" layout-fill ng-app="app" ng-controller="app.views.layout as vm">
+        <div ng-include="'/App/Main/views/layout/header.cshtml'"></div>
+        <div ng-controller="alertController" class="container-fluid" id="alertContainer">
+            <alert-message></alert-message>
         </div>
+        <div ui-view="mastervw" class="anim-in-out anim-fade col-lg-12" data-anim-speed="500"></div>
+        <div ng-include="'/App/Main/views/layout/footer.cshtml'"></div>
     </div>
     <!-- Dynamic scripts of ABP system (They are created on runtime and can not be bundled) -->
     <script src="~/api/AbpServiceProxies/GetAll?type=angular"></script>

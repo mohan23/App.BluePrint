@@ -21,6 +21,7 @@ namespace App.BluePrint.Migrations
             // You can add any seed data here...
             new InitialDataBuilder().Build(context);
             new AdministrationDataBuilder().Build(context);
+            new MetadataDataBuilder().Build(context);
         }
     }
 

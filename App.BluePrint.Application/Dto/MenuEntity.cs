@@ -10,10 +10,44 @@ using System.Threading.Tasks;
 
 namespace App.BluePrint.Dto
 {
+    [AutoMapFrom(typeof(AdminMenu))]
+    public class AdminMenuDto : Entity<int>
+    {
+        public string MenuName { get; set; }
+        public string DisplayName { get; set; }
+        public string Description { get; set; }
+        public string LinkUrl { get; set; }
+        public int? LookupId { get; set; }
+        public string ImageIconUrl { get; set; }
+        public string ImageIconClass { get; set; }
+        public bool IsAction { get; set; }
+        public string RelativeUrl { get; set; }
+    }
+
+
+    public class AdminCategoryDto : Entity
+    {
+        public string Name { get; set; }
+        public string Value { get; set; }
+        public string Description { get; set; }
+        public string IconCss { get; set; }
+        public List<AdminMenuDto> Menus { get; set; }
+    }
+
+    [AutoMapFrom(typeof(Lookup))]
+    public class LookupDto : Entity<int>
+    {
+        public string Code { get; set; }
+        public string Name { get; set; }
+        public string Value { get; set; }
+        public string Description { get; set; }
+        public string IconCss { get; set; }
+    }
+
     public class MenuEntity : IOutputDto
     {
-       public List<Lookup> CategoryList { get; set; }
-       public List<AdminMenu> Menus { get; set; }
+       public List<LookupDto> CategoryList { get; set; }
+       public List<AdminMenuDto> Menus { get; set; }
     }
 
     public class MenuRequestInput : IInputDto

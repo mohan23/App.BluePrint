@@ -15,4 +15,16 @@ namespace App.BluePrint.Common
         Live,
         Custom
     }
+
+    public enum ExPropType
+    {
+        Form,
+        Group,
+        Section,
+        Field,
+        Table,
+        TableField,
+        FormulaField,
+        ImmutableField
+    }
 }

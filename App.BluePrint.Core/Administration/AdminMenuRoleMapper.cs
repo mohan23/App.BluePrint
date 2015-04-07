@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace App.BluePrint.Administration
 {
-    [Table("MenuRoles", Schema = "Administration")]
+    [Table("NavigationRoles", Schema = "Administration")]
     public class AdminMenuRoleMapper : CreationAuditedEntity<int>
     {
         /// <summary>

@@ -1,6 +1,6 @@
 ﻿<div ng-show="alert.type != undefined" class="alert alert-{{alert.type}}">
-    <div class="container-fluid">
-        <div class="col-sm-11">
+    <div layout="column">
+        <div>
             <i class="icon-error-bp" ng-show="alert.type == 'danger'" />
             <i class="icon-warning2-bp" ng-show="alert.type == 'warn'" />
             <i class="icon-info3-bp" ng-show="alert.type == 'info'" />

@@ -147,5 +147,8 @@ namespace Abp.Authorization.Users
         /// </summary>
         [ForeignKey("UserId")]
         public virtual ICollection<Setting> Settings { get; set; }
+
+       
+
     }
 }

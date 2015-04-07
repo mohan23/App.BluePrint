@@ -45,25 +45,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Abp, Version=0.5.7.1, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Abp, Version=0.5.8.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Abp.0.5.7.1\lib\net451\Abp.dll</HintPath>
+      <HintPath>..\packages\Abp.0.5.8.1\lib\net451\Abp.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.AutoMapper, Version=0.5.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.AutoMapper.0.5.7.0\lib\net451\Abp.AutoMapper.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Abp.AutoMapper, Version=0.5.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Abp.AutoMapper.0.5.8.0\lib\net451\Abp.AutoMapper.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Web, Version=0.5.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Web.0.5.6.0\lib\net451\Abp.Web.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Abp.Web, Version=0.5.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Abp.Web.0.5.8.0\lib\net451\Abp.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Web.Api, Version=0.5.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Web.Api.0.5.6.0\lib\net451\Abp.Web.Api.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Abp.Web.Api, Version=0.5.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Abp.Web.Api.0.5.8.0\lib\net451\Abp.Web.Api.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Web.Mvc, Version=0.5.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Web.Mvc.0.5.6.0\lib\net451\Abp.Web.Mvc.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Abp.Web.Mvc, Version=0.5.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Abp.Web.Mvc.0.5.8.0\lib\net451\Abp.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
@@ -232,6 +232,7 @@
     <Content Include="Abp\Framework\scripts\libs\abp.blockUI.js" />
     <Content Include="Abp\Framework\scripts\libs\abp.jquery.js" />
     <Content Include="Abp\Framework\scripts\libs\abp.spin.js" />
+    <Content Include="Abp\Framework\scripts\libs\abp.sweet-alert.js" />
     <Content Include="Abp\Framework\scripts\libs\abp.toastr.js" />
     <Content Include="Abp\Framework\scripts\libs\angularjs\abp.ng.js" />
     <Content Include="Abp\Framework\scripts\libs\requirejs\plugins\service.js" />
@@ -245,12 +246,13 @@
     <Content Include="App\Account\images\login1.jpg" />
     <Content Include="App\Account\images\login2.jpg" />
     <Content Include="App\Account\js\login.js" />
-    <Content Include="App\Common\js\app.abp.ui-1.0.0.4.js" />
-    <Content Include="App\Common\js\app.alerts-1.0.0.3.js" />
-    <Content Include="App\Common\js\app.directives-1.0.0.2.js" />
+    <Content Include="App\Common\js\app.abp.ui-1.0.0.6.js" />
+    <Content Include="App\Common\js\app.alerts-1.0.0.11.js" />
+    <Content Include="App\Common\js\app.directives-1.0.0.6.js" />
     <Content Include="App\Common\Templates\alertMessage.html" />
+    <Content Include="App\Common\Templates\blank.html" />
     <Content Include="App\Common\Templates\progressToast.html" />
-    <Content Include="App\Main\app-1.0.0.26.js" />
+    <Content Include="App\Main\app-1.0.0.30.js" />
     <Content Include="App\Main\images\abp-logo.png" />
     <Content Include="App\Main\images\blueprint_footer_logo.jpg" />
     <Content Include="App\Main\images\blueprint_logo.png" />
@@ -260,17 +262,21 @@
     <Content Include="App\Main\main.min.css">
       <DependentUpon>main.css</DependentUpon>
     </Content>
-    <Content Include="App\Main\views\layout\header.js" />
+    <Content Include="App\Main\views\admin\ProcessDesign\ProcessDesign-1.0.0.10.js" />
+    <Content Include="App\Main\views\layout\header-1.0.0.18.js" />
     <Content Include="App\Main\views\layout\layout.js" />
     <Content Include="App\Main\views\home\home.js" />
     <Content Include="App\Main\views\search\about.js" />
-    <Content Include="App\Main\views\admin\adminstart.js" />
-    <Content Include="Abp\Framework\styles\abp.less" />
-    <Content Include="Abp\Framework\styles\abp.css.map" />
+    <Content Include="App\Main\views\admin\adminstart-1.0.0.35.js" />
     <Content Include="App\Common\Templates\alertDismissable.html" />
     <Content Include="App\data\alertTemplates.json" />
-    <Content Include="Abp\Framework\scripts\libs\abp.sweet-alert.js" />
     <None Include=".bin\node.cmd" />
+    <Content Include="App\Main\views\admin\ProcessDesign\ProcessDesign.cshtml" />
+    <Content Include="Abp\Framework\styles\abp.less" />
+    <Content Include="Abp\Framework\styles\abp.css.map" />
+    <Content Include="App\Main\views\admin\manageusers\manageUsers.cshtml" />
+    <Content Include="App\Main\views\layout\layout.cshtml" />
+    <Content Include="App\Main\views\layout\footer.cshtml" />
     <None Include="ClearTemp.bat" />
     <Content Include="Content\bootstrap-cosmo.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -353,7 +359,7 @@
     <Content Include="Scripts\angular-ui-router.js" />
     <Content Include="Scripts\angular-ui-router.min.js" />
     <Content Include="App\Main\main.less" />
-    <Content Include="App\Main\views\layout\layout.cshtml" />
+    <Content Include="App\Main\views\layout\layout_o.cshtml" />
     <Content Include="App\Main\views\home\home.cshtml" />
     <Content Include="App\Main\views\search\about.cshtml" />
     <Content Include="App\Main\web.config" />
@@ -1526,6 +1532,8 @@
     <Content Include="Scripts\lib\angular-ui-bootstrap\template\tooltip\tooltip-popup.html" />
     <Content Include="Scripts\lib\angular-ui-bootstrap\template\typeahead\typeahead-match.html" />
     <Content Include="Scripts\lib\angular-ui-bootstrap\template\typeahead\typeahead-popup.html" />
+    <Content Include="Scripts\lib\angular-ui-router-anim-in-out\anim-in-out.js" />
+    <Content Include="Scripts\lib\angular-ui-router-anim-in-out\css\anim-in-out.css" />
     <Content Include="Scripts\lib\angular-ui-router\release\angular-ui-router.js" />
     <Content Include="Scripts\lib\angular-ui-router\release\angular-ui-router.min.js" />
     <Content Include="Scripts\lib\angular-ui-router\src\common.js" />
@@ -1543,6 +1551,12 @@
     <Content Include="Scripts\lib\angular-ui-utils\ui-utils-ieshiv.min.js" />
     <Content Include="Scripts\lib\angular-ui-utils\ui-utils.js" />
     <Content Include="Scripts\lib\angular-ui-utils\ui-utils.min.js" />
+    <Content Include="Scripts\lib\angular-ui\build\angular-ui-ieshiv.js" />
+    <Content Include="Scripts\lib\angular-ui\build\angular-ui-ieshiv.min.js" />
+    <Content Include="Scripts\lib\angular-ui\build\angular-ui.css" />
+    <Content Include="Scripts\lib\angular-ui\build\angular-ui.js" />
+    <Content Include="Scripts\lib\angular-ui\build\angular-ui.min.css" />
+    <Content Include="Scripts\lib\angular-ui\build\angular-ui.min.js" />
     <Content Include="Scripts\lib\angular\angular-csp.css" />
     <Content Include="Scripts\lib\angular\angular.min.js" />
     <Content Include="Scripts\lib\arrive\minified\arrive.min.js" />
@@ -1602,6 +1616,7 @@
     <Content Include="Scripts\others\respond.src.js" />
     <Content Include="Scripts\others\spinjs\jquery.spin.js" />
     <Content Include="Scripts\others\spinjs\spin.js" />
+    <None Include="Scripts\toastr.js.map" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
     <Content Include="Web.config" />
@@ -1745,7 +1760,6 @@
     <Content Include="Scripts\lib\spin.js\bower.json" />
     <Content Include="Scripts\lib\spin.js\README.md" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Scripts\version.json" />
     <Content Include="Scripts\lib\materialize\dist\font\material-design-icons\Material-Design-Icons.eot" />
     <Content Include="Scripts\lib\materialize\dist\font\material-design-icons\Material-Design-Icons.ttf" />
     <Content Include="Scripts\lib\materialize\dist\font\material-design-icons\Material-Design-Icons.woff" />
@@ -1754,6 +1768,7 @@
     <Content Include="Scripts\lib\materialize\dist\font\roboto\Roboto-Medium.ttf" />
     <Content Include="Scripts\lib\materialize\dist\font\roboto\Roboto-Regular.ttf" />
     <Content Include="Scripts\lib\materialize\dist\font\roboto\Roboto-Thin.ttf" />
+    <Content Include="Scripts\version.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1826,7 +1841,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties Scripts_2lib_2angular-animate_2package_1json__JSONSchema="http://json.schemastore.org/package" bower_1json__JSONSchema="http://json.schemastore.org/bower" />
+      <UserProperties bower_1json__JSONSchema="http://json.schemastore.org/bower" Scripts_2lib_2angular-animate_2package_1json__JSONSchema="http://json.schemastore.org/package" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
