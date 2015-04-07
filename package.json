@@ -1,8 +1,8 @@
 {
-  "name": "BluePrint Application",
-  "version": "1.0.0.beta10001",
-  "description": "BluePrint Application",
+  "name": "someProj",
+  "version": "0.0.0",
+  "description": "",
   "scripts": { },
-  "author": "Mohan Kumar",
+  "author": "",
   "license": ""
 }

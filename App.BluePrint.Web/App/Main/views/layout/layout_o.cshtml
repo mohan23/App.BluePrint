@@ -1,0 +1,70 @@
+﻿@using System.Threading
+@using System.Web.Optimization
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BluePrint for Emerio</title>
+
+    <link rel="shortcut icon" href="~/favicon.ico">
+
+    @Styles.Render("~/Bundles/App/vendor/css")
+    @Styles.Render("~/Bundles/App/Main/css")
+
+    <!--[if lt IE 8]>
+       @Styles.Render("~/Bundles/App/Vendor/IE7Css")
+    <![endif]-->
+
+    @Styles.Render("~/Bundles/App/Iconset/css")
+    @Styles.Render("~/Bundles/App/BootStrapMaterial/css")
+    <script type="text/javascript">
+        //This is used to get the application's root path from javascript. It's useful if you're running application in a virtual directory under IIS.
+        var abp = abp || {}; abp.appPath = '@ApplicationPath';
+    </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="@Url.Content("~/Scripts/others/html5shiv.js")"></script>
+        <script src="@Url.Content("~/Scripts/others/respond.min.js")"></script>
+    <![endif]-->
+    @Scripts.Render("~/Bundles/App/vendor/js")
+    @Scripts.Render("~/Bundles/App/BootStrapMaterial/js")
+
+    <script>
+        //Localizing momentjs
+        moment.locale('@Thread.CurrentThread.CurrentUICulture.Name');
+    </script>
+
+
+    @Scripts.Render("~/Bundles/App/Main/js")
+    @Scripts.Render("~/Bundles/App/Common/js")
+    @Scripts.Render("~/Bundles/App/Views/js")
+    <!--[if lt IE 8]>
+        <script src="@Url.Content("~/Content/iconset/IE7/IE7.js")"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div ng-app="app">
+        <div ng-controller="app.views.layout as vm">
+            <div ng-include="'/App/Main/views/layout/header.cshtml'"></div>
+            <div ng-controller="alertController" class="container-fluid" id="alertContainer">
+                <alert-message></alert-message>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div ui-view="mastervw" class="anim-in-out anim-fade col-lg-12" data-anim-speed="500"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Dynamic scripts of ABP system (They are created on runtime and can not be bundled) -->
+    <script src="~/api/AbpServiceProxies/GetAll?type=angular"></script>
+    <script src="~/AbpScripts/GetScripts" type="text/javascript"></script>
+</body>
+</html>
